@@ -7,9 +7,11 @@ import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { initializeKeycloak } from './core/init/keycloak-init.factory';
 import { ApiService } from './core/services/apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MostrarEstadisticasComponent } from './core/components/mostrar-estadisticas/mostrar-estadisticas.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MostrarEstadisticasComponent
   ],
   imports: [
     BrowserModule,
