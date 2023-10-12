@@ -1,1 +1,45 @@
 <p>header works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: violet;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .button {
+            background-color: #6b0f7a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #9d1abb;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="button">Menu</button>
+        <button class="button">Suscribirse</button>
+        <button class="button">Jugadores</button>
+    </div>
+</body>
+</html>
+
