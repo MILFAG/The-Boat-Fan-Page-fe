@@ -1,9 +1,9 @@
 export const environment = {
     production: true,
     keycloak: {
-        url:  'http://localhost:8080' ,
+        url:  'https://milfag-keycloak.up.railway.app/' ,
         realm: 'dacs',
-        clientId: 'dacs2023-fe'
+        clientId: 'dacs2023'
     },
        //backendForFrontendUrl: 'http://localhost:8088',
       backendForFrontendUrl: '/api'
