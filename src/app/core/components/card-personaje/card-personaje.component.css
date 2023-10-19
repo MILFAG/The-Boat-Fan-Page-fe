@@ -1,0 +1,105 @@
+body {
+  margin-top: 100px;
+  background: transparent;
+}
+
+.card-Personaje {
+  width: 350px;; 
+  height: 540px;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 18px;
+  margin-right: 0.5rem;
+  margin:1rem;
+  transition: transform 0.5s ease-out;
+}
+
+.card-Personaje:hover {
+  transform: scale(1.1); 
+}
+
+[id="pg-1"] {
+  border-top: 0.5px solid #7BFF88;
+  border-right: 2px solid #7BFF88;
+  border-bottom: 1px solid #7BFF88;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(94, 76, 100, 0.24) 48.37%, rgba(61, 59, 59, 0.20) 100%);
+}
+[id="pg-1"]:hover{
+  transition: transform 0.5s ease-out;
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.20) 0%, rgba(69, 54, 54, 0.24) 33.4%, rgba(90, 120, 89, 0.35) 68.44%, rgba(123, 255, 136, 0.45) 100%);
+}
+
+[id="pg-2"] {
+  border-top: 0.5px solid rgba(236, 123, 255, 0.61);
+  border-right: 2px solid rgba(236, 123, 255, 0.61);
+  border-bottom: 1px solid rgba(236, 123, 255, 0.61);
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(94, 76, 100, 0.24) 48.37%, rgba(61, 59, 59, 0.20) 100%);
+
+}
+[id="pg-2"]:hover{
+  transition: transform 0.5s ease-out;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(94, 76, 100, 0.24) 48.37%, rgba(236, 123, 255, 0.45) 100%);
+}
+
+[id="pg-3"] {
+  border-top: 0.5px solid #857BFF;
+  border-right: 2px solid #857BFF;
+  border-bottom: 1px solid #857BFF;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(92, 83, 117, 0.45) 48.37%, rgba(61, 59, 59, 0.20) 100%);
+}
+[id="pg-3"]:hover{
+  transition: transform 0.5s ease-out;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(92, 83, 117, 0.45) 48.37%, rgba(133, 123, 255, 0.45) 100%);
+}
+
+[id="pg-4"] {
+  border-top: 0.5px solid #FFEA7B;
+  border-right: 2px solid #FFEA7B;
+  border-bottom: 1px solid #FFEA7B;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(118, 116, 105, 0.45) 48.37%, rgba(61, 59, 59, 0.20) 100%);
+}
+[id="pg-4"]:hover{
+  transition: transform 0.5s ease-out;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(118, 116, 105, 0.45) 48.37%, rgba(255, 234, 123, 0.45) 100%);
+}
+
+
+
+[id="pg-5"] {
+  border-top: 1px solid #906AFF;
+  border-right: 1.5px solid #906AFF;
+  border-bottom: 1px solid #906AFF;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(114, 85, 202, 0.45) 48.37%, rgba(61, 59, 59, 0.20) 100%);
+}
+[id="pg-5"]:hover{
+  transition: transform 0.5s ease-out;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(92, 83, 117, 0.45) 48.37%, rgba(134, 123, 255, 0.539) 100%);
+}
+
+
+
+[id="pg-6"] {
+  border-top: 0.5px solid #7BFFEF;
+  border-right: 2px solid #7BFFEF;
+  border-bottom: 1px solid #7bffef;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(97, 196, 184, 0.331) 48.37%, rgba(61, 59, 59, 0.20) 100%);
+
+}
+[id="pg-6"]:hover{
+  transition: transform 0.5s ease-out;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(72, 118, 113, 0.331) 48.37%, rgba(108, 252, 252, 0.434) 100%);
+}
+
+
+
+[id="pg-7"] {
+  border-top: 0.5px solid #FFDA7B;
+  border-right: 2px solid #FFDA7B;
+  border-bottom: 1px solid #FFDA7B;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(127, 120, 105, 0.45) 48.37%, rgba(61, 59, 59, 0.20) 100%);
+}
+[id="pg-7"]:hover{
+  transition: transform 0.5s ease-out;
+  background: linear-gradient(180deg, rgba(61, 59, 59, 0.20) 0%, rgba(127, 120, 105, 0.45) 48.37%, rgba(255, 218, 123, 0.45) 100%);
+}
+

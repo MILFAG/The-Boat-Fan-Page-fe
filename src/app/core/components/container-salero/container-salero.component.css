@@ -1,0 +1,32 @@
+section{
+    background: transparent;
+    
+}
+.container{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease-out;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    top:50%;
+    transform: translateY(-50%);
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.next-button{
+    right: 1rem;
+}
+
+.prev-button{
+    left: 1rem;
+}
+

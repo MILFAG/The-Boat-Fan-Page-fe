@@ -1,6 +1,12 @@
 <router-outlet> 
-<app-header></app-header>
-
+	<app-header></app-header>
+		<!--<button *ngIf="isLogueado" type="button" (click)="cerrarSesion()">Cerrar Session</button>
+		<button *ngIf="!isLogueado" type="button" (click)="iniciarSesion()">Iniciar Session</button>-->
+		
+<!--Contenedor con las cards-->
+<!--<app-container-salero></app-container-salero>-->
+<app-container-salero></app-container-salero>
+	<app-mostrar-estadisticas></app-mostrar-estadisticas>
 </router-outlet>
 
 <!-- <h1>Mi Aplicación Angular {{title}} con Keycloak</h1>

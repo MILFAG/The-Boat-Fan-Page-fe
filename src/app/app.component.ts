@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
   constructor(private readonly keycloak: KeycloakService,private apiService: ApiService) {}
 
   public async ngOnInit() {
-
     this.isLogueado = await this.keycloak.isLoggedIn();
     this.role=await this.keycloak.isUserInRole("ROLE-A");
     this.apiService.getTest().subscribe(resp => {this.testResponse= resp});
@@ -41,4 +40,11 @@ export class AppComponent implements OnInit {
   public cerrarSesion() {
     this.keycloak.logout();
   }
+
+
+
+
+  
 }
+
+
