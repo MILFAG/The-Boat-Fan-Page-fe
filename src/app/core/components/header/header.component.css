@@ -1,6 +1,5 @@
 
 .header {
-    padding: 0.5rem;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -23,6 +22,6 @@
 }
 
 .button:last-child{
-    margin-right: 3.5rem;
+    margin-right: 3rem;
 }
 

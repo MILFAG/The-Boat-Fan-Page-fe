@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div class="contenedor-background">
+        <div class="circle" #circle></div>
+        <div class="estadisticas">
+            <swiper-container loop="true" centered-slides="true" zoom="true" >
+                <swiper-slide [id]="id" *ngFor="let id of jugadorIds">
+                    <div class="contenedor-jugador">
+                        <img class="agente" #agenteImg (mouseover)="scaleCircle()"  src="/assets/VIPER.png" alt="">
+                    </div>
+                    <div class="contenedor-jugador--estadisticas">
+                        <app-last-game  *ngFor="let i of list"></app-last-game>
+                    </div>
+
+                </swiper-slide>
+            </swiper-container>
+        </div>
+    </div>
+</body>
+</html>
