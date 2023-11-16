@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
-import { initializeKeycloak } from './core/init/keycloak-init.factory';
+//import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+//import { initializeKeycloak } from './core/init/keycloak-init.factory';
 import { ApiService } from './core/services/apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/components/header/header.component';
@@ -28,19 +28,19 @@ import { HomeComponent } from './core/components/home/home.component';
   ],
   imports: [
     BrowserModule,
-    KeycloakAngularModule,
+    //KeycloakAngularModule,
     AppRoutingModule,
-    HttpClientModule  
+    HttpClientModule 
   ],
-  providers: [
+ /* providers: [
     {
       provide: APP_INITIALIZER,
-      useFactory: initializeKeycloak,
+      //useFactory: initializeKeycloak,
       multi: true,
       deps: [KeycloakService],
     },
     ApiService,
-  ],
+  ],*/
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
