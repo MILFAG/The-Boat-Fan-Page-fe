@@ -34,8 +34,8 @@ export class AppComponent implements OnInit {
       this.perfilUsuario = await this.keycloak.loadUserProfile();
     }*/
 
-    console.log(this.agenteService.obtenerTodos());
-    console.log(this.agenteService.obtenerTodos()[1].nombre)
+    console.log(this.agenteService.obtenerAgentes());
+    console.log(this.agenteService.obtenerAgentes()[1].nombre)
   }
 
   /*public iniciarSesion() {
