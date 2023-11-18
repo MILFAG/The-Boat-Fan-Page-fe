@@ -4,6 +4,11 @@ import { KeycloakProfile } from 'keycloak-js';
 import { ApiService } from './core/services/apiservice.service';
 import { ITestResponse } from './core/models/response.interface';
 import { AgenteService } from './core/services/agente.service';
+import { Agente } from './core/models/agente';
+import { HttpClient } from '@angular/common/http';
+import { JugadorService } from './core/services/jugador.service';
+import { RangoService } from './core/services/rango.service';
+import { Rango } from './core/models/rango';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +18,11 @@ import { AgenteService } from './core/services/agente.service';
 export class AppComponent implements OnInit {
   title = 'dacs2023';
   public isLogueado = false;
-  agenteService = new AgenteService()
+  
   /*public testResponse : ITestResponse  | null = null;
   public perfilUsuario: KeycloakProfile | null = null;*/
   public role = false;
-  constructor(/*private readonly keycloak: KeycloakService,private apiService: ApiService*/) {}
+  constructor(/*private readonly keycloak: KeycloakService,private apiService: ApiService*/  private rangoService: RangoService ) {}
 
   public async ngOnInit() {
    /* this.isLogueado = await this.keycloak.isLoggedIn();
@@ -34,8 +39,12 @@ export class AppComponent implements OnInit {
       this.perfilUsuario = await this.keycloak.loadUserProfile();
     }*/
 
-    console.log(this.agenteService.obtenerAgentes());
-    console.log(this.agenteService.obtenerAgentes()[1].nombre)
+   let jugador;
+   this.rangoService.obtenerRangos().subscribe((response:any)=>{
+    jugador = response as Rango[]
+    console.log(jugador[13].rango);
+    })
+    
   }
 
   /*public iniciarSesion() {

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 //import { initializeKeycloak } from './core/init/keycloak-init.factory';
-import { ApiService } from './core/services/apiservice.service';
+//import { ApiService } from './core/services/apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/components/header/header.component';
 import { CardPersonajeComponent } from './core/components/card-personaje/card-personaje.component';
@@ -14,6 +14,7 @@ import { SponsorListadoComponent } from './core/components/sponsor-listado/spons
 import { EstadisticasJugadorComponent } from './core/components/estadisticas-jugador/estadisticas-jugador.component';
 import { LastGameComponent } from './core/components/last-game/last-game.component';
 import { HomeComponent } from './core/components/home/home.component';
+import { AgenteService } from './core/services/agente.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,9 @@ import { HomeComponent } from './core/components/home/home.component';
     //KeycloakAngularModule,
     AppRoutingModule,
     HttpClientModule 
+  ],
+  providers: [
+    AgenteService,
   ],
  /* providers: [
     {

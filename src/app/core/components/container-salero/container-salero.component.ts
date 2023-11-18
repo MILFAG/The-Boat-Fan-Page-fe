@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import Swiper from 'swiper';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
+import { Jugador } from '../../models/jugador';
+import { JugadorService } from '../../services/jugador.service';
 // register Swiper custom elements
 register();
 
@@ -11,14 +13,20 @@ register();
   styleUrls: ['./container-salero.component.css']
 })
 export class ContainerSaleroComponent implements OnInit {
-  id!:number;
-  constructor() {
-    this.id = 1;
+  //id!:number;
+  jugadores!: Jugador[] 
+  
+  
+  constructor(private jugadorService: JugadorService) {
+    //this.id = 1;
   }
-  // Define una lista de IDs de jugador para el carrusel
-  jugadorIds: number[] = [1, 2, 3, 4, 5, 6, 7]; // ID de cada jugador
+  // Define una lista de IDs de jugador para el carrusel   
   mySwiper!: Swiper;
   ngOnInit() {
+    this.jugadorService.obtenerJugadores().subscribe((response:any)=>{
+      this.jugadores = response as Jugador[]})
+
+
     this.mySwiper = new Swiper('.swiper-container', {
     spaceBetween: 10,
       pagination: {
