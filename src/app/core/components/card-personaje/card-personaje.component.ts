@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Jugador } from '../../models/jugador';
 import { AgenteService } from '../../services/agente.service';
 import { Agente } from '../../models/agente';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
 
 
 
@@ -14,37 +15,36 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CardPersonajeComponent implements OnInit{
   @Input()
-  jugador!: Jugador;
+  jugador!: Jugador;  
   agente!: Agente;
-  imagen!: String
+  
   estiloDiv: string =  '';
   estiloImg: string = 'max-width: 400%; height: 175%; object-fit: cover; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1px));'
-  constructor(private agenteService: AgenteService, private http: HttpClient) {     
+  constructor(private agenteService: AgenteService, private http: HttpClient) {   
+    
 
   }
-  ngOnInit(): void {    
-    this.obtenerAgente()  
-    this.crearEstilos()  
-    this.imagen=this.agente.imagenCompleta;
-       
+  ngOnInit(): void {           
+    this.obtenerAgente()
   }
-  
-  obtenerAgente():void{
+
+  obtenerAgente(): void {
     this.agenteService.obtenerAgentePorNombre(this.jugador.nombreAgente).subscribe(
       (agente) => {
-        this.agente = agente as Agente;       
+        this.agente = agente as Agente;        
+        this.crearEstilos()      
+      },
+      (error) => {
+        console.error('Error al obtener el agente:', error);
       }
-    )    
+    );
   }
-
-  crearEstilos():void{
-  let color = '#6e6b6a'
+  
+  crearEstilos():void{ 
   let color0 = '#'+this.agente.coloresGradiente[0]
   let color1 = '#'+this.agente.coloresGradiente[1]
-  let color2 = '#'+this.agente.coloresGradiente[2]
-  
+  let color2 = '#'+this.agente.coloresGradiente[2]  
   this.estiloDiv = 'width:25%; height:85%; box-sizing: border-box; padding:10%; border-radius: 0.8rem; margin-right: 0.5rem; margin:1rem; transition: transform 0.5s ease-out; border: 1px solid #857BFF;'
-  //this.estilo += ('background: linear-gradient(180deg, rgba(92, 83, 117, 0.45) 48.37% ,rgba(92, 83, 117, 0.45) 48.37%, rgba(61, 59, 59, 0.20) 100%)')
   this.estiloDiv += 'background: linear-gradient(#222222,#444444,'+this.aclararColor(color2,15)+');';
   //console.log(this.agente.imagenCompleta)
   this.estiloDiv += 'overflow: hidden; display: flex; align-items: center; justify-content: center;'

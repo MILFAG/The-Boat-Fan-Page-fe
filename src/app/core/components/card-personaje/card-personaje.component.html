@@ -11,7 +11,7 @@
       
       <div [style]="estiloDiv">
      <!--    <img style="width: 750px; height: 1000px;" src="https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/fullportrait.png" alt="Imagen de ejemplo"> -->
-         <img [style]="estiloImg" src={{imagen}} alt="Imagen de ejemplo">
+         <img [style]="estiloImg"  *ngIf="agente" [src]="agente.imagenCompleta" alt="Imagen de ejemplo" >
       </div>  
 </body>
 </html>

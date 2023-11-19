@@ -41,8 +41,7 @@ export class AppComponent implements OnInit {
 
    let jugador;
    this.rangoService.obtenerRangos().subscribe((response:any)=>{
-    jugador = response as Rango[]
-    console.log(jugador[13].rango);
+    jugador = response as Rango[]    
     })
     
   }

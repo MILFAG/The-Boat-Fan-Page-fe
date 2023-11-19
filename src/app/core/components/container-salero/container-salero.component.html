@@ -9,8 +9,7 @@
 
 <body>
   <swiper-container slides-per-view="3.25" loop="true" centered-slides="true" zoom="true" >
-    <swiper-slide *ngFor="let jugador of jugadores">
-      
+    <swiper-slide *ngFor="let jugador of jugadores">      
       <app-card-personaje [jugador]="jugador"></app-card-personaje>
    </swiper-slide>
   </swiper-container>
