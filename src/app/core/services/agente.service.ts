@@ -19,7 +19,7 @@ export class AgenteService {
     const url = environment.backendForFrontendUrl+"/agentes"
     const agenteStorage = sessionStorage.getItem("agentes")  
     if (agenteStorage == null){
-      const agentes = this.http.get(url).pipe(map((response:any)=> response as Agente[]))         
+      let agentes = this.http.get(url).pipe(map((response:any)=> response as Agente[]))         
       agentes.subscribe((response:any)=>{
         const agentes = response as Agente[]     
         sessionStorage.setItem("agentes",JSON.stringify(agentes));       

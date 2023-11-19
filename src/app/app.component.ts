@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 import { JugadorService } from './core/services/jugador.service';
 import { RangoService } from './core/services/rango.service';
 import { Rango } from './core/models/rango';
+import { EstadisticasService } from './core/services/estadisticas.service';
+import { Estadisticas } from './core/models/estadisticas';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +24,7 @@ export class AppComponent implements OnInit {
   /*public testResponse : ITestResponse  | null = null;
   public perfilUsuario: KeycloakProfile | null = null;*/
   public role = false;
-  constructor(/*private readonly keycloak: KeycloakService,private apiService: ApiService*/  private rangoService: RangoService ) {}
+  constructor(/*private readonly keycloak: KeycloakService,private apiService: ApiService*/  private e: EstadisticasService ) {}
 
   public async ngOnInit() {
    /* this.isLogueado = await this.keycloak.isLoggedIn();
@@ -39,9 +41,10 @@ export class AppComponent implements OnInit {
       this.perfilUsuario = await this.keycloak.loadUserProfile();
     }*/
 
-   let jugador;
-   this.rangoService.obtenerRangos().subscribe((response:any)=>{
-    jugador = response as Rango[]    
+   //let jugador;
+   this.e.obtenerEstadisticasJugador("bebotex","0000").subscribe((response:any)=>{
+    let jugador = response as Estadisticas;
+    console.log(jugador)  
     })
     
   }

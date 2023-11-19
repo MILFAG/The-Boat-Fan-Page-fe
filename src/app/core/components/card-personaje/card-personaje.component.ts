@@ -44,7 +44,7 @@ export class CardPersonajeComponent implements OnInit{
   let color0 = '#'+this.agente.coloresGradiente[0]
   let color1 = '#'+this.agente.coloresGradiente[1]
   let color2 = '#'+this.agente.coloresGradiente[2]  
-  this.estiloDiv = 'width:25%; height:85%; box-sizing: border-box; padding:10%; border-radius: 0.8rem; margin-right: 0.5rem; margin:1rem; transition: transform 0.5s ease-out; border: 1px solid #857BFF;'
+  this.estiloDiv = 'width:25%; height:85%; box-sizing: border-box; padding:10%; border-radius: 0.8rem; margin-right: 0.5rem; margin:1rem; transition: transform 0.5s ease-out; border: 2px solid'+this.aclararColor(color2,30)+';'
   this.estiloDiv += 'background: linear-gradient(#222222,#444444,'+this.aclararColor(color2,15)+');';
   //console.log(this.agente.imagenCompleta)
   this.estiloDiv += 'overflow: hidden; display: flex; align-items: center; justify-content: center;'
