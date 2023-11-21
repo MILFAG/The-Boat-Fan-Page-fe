@@ -1,8 +1,7 @@
-import { AfterViewInit, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Jugador } from '../../models/jugador';
 import { AgenteService } from '../../services/agente.service';
 import { Agente } from '../../models/agente';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { EstadisticasService } from '../../services/estadisticas.service';
 import { Estadisticas } from '../../models/estadisticas';
@@ -46,8 +45,7 @@ export class CardPersonajeComponent implements OnInit{
         this.estadisticas = estadisticas as Estadisticas             
         this.rangoService.obtenerRango(estadisticas.rango).subscribe(
           (rango) =>
-          {this.rango = rango as Rango;     
-            console.log(estadisticas.ultimaPartida)       
+          {this.rango = rango as Rango;                     
           this.crearEstiloTrasero()
           
           }
@@ -66,13 +64,10 @@ export class CardPersonajeComponent implements OnInit{
  
   }
 
-  crearEstiloTrasero():void{    
-    const colorFondo = '#'+this.rango.colorFondo
+  crearEstiloTrasero():void{        
     const colorRango = ""+ this.rango.color
     this.estiloTrasero = ' border: 2px solid'+this.oscurecerColor(colorRango,30)+';'
     this.estiloTrasero += 'display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(#222222,#444444,'+this.oscurecerColor(colorRango,30)+');';   
-
-   
   }
    
 formatearFecha(fecha:string):string{

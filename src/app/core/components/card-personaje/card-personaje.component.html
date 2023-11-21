@@ -1,14 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head> -->
 <body>    
     <div class="contenedor">
- 
-
 
         <div [style]="estiloTrasero" class="card-Personaje back"> 
             <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>   
@@ -32,17 +23,10 @@
              </div>
             <h1 class="footerCarta">Ultima partida: {{formatearFecha(estadisticas.ultimaPartida)}}</h1>  
         </div> 
-
-
-
         <div [style]="estiloFrontal" class="card-Personaje front">   
             <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>             
              <img [style]="estiloAgente"  *ngIf="agente" [src]="agente.imagenCompleta" alt="Imagen de ejemplo" >
-        </div>    
-        
-      
-
+        </div>          
         
     </div>
 </body>
-<!-- </html> -->
