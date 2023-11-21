@@ -1,17 +1,48 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-</head>
+</head> -->
 <body>    
-     <!-- <div [id]="'pg-'+ 1" class="card-Personaje"></div>  -->
-   
+    <div class="contenedor">
+ 
+
+
+        <div [style]="estiloTrasero" class="card-Personaje back"> 
+            <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>   
+             <img [style]="estiloRango"  *ngIf="rango" [src]="rango.iconoGrande" alt="Imagen de ejemplo" >
+             <h1 class="estiloEpigrafe">{{rango.rango}}</h1>      
+             <div class="contenedor-estadisticas">
+                <div style="text-align: left; margin-right: 5vw;" class="textoEstadisticas" >
+                    <h1>Puntaje</h1>
+                    <h1>K/D</h1>
+                    <h1>%Headshot</h1>
+                    <h1>%Victorias</h1>
+                    <h1>Δ Daño</h1>
+                </div>
+                <div style="text-align: right;" class="textoEstadisticas" >
+                    <h1>{{estadisticas.acs}}</h1>
+                    <h1>{{estadisticas.kd.toFixed(2)}}</h1>
+                    <h1>{{estadisticas.porcHs.toFixed(2)}}</h1>
+                    <h1>{{estadisticas.porcVictorias.toFixed(2)}}</h1>
+                    <h1>{{estadisticas.deltaDanio}}</h1>
+                </div>
+             </div>
+            <h1 class="footerCarta">Ultima partida: {{formatearFecha(estadisticas.ultimaPartida)}}</h1>  
+        </div> 
+
+
+
+        <div [style]="estiloFrontal" class="card-Personaje front">   
+            <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>             
+             <img [style]="estiloAgente"  *ngIf="agente" [src]="agente.imagenCompleta" alt="Imagen de ejemplo" >
+        </div>    
+        
       
-      <div [style]="estiloDiv">
-     <!--    <img style="width: 750px; height: 1000px;" src="https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/fullportrait.png" alt="Imagen de ejemplo"> -->
-         <img [style]="estiloImg"  *ngIf="agente" [src]="agente.imagenCompleta" alt="Imagen de ejemplo" >
-      </div>  
+
+        
+    </div>
 </body>
-</html>
+<!-- </html> -->

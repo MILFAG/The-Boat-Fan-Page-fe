@@ -31,7 +31,23 @@ import { Jugador } from "../models/jugador"
           return of(jsonArray.map((response:any)=> response as Rango))     
       }
     }
-  
     
+    obtenerRango(id: number):Observable<Rango | undefined> {     
+      let rangoStorage = sessionStorage.getItem("rangos")  
+     if(!rangoStorage){
+        return this.obtenerRangos().pipe(
+          map((rangos:Rango[]) => rangos.find((rango:Rango) => rango.id == id))          
+        )    
+      }         
+      const jsonArray: Rango[] = JSON.parse(rangoStorage!)     
+      let rango = jsonArray.find(rango => rango.id == id)
+      if(rango){
+        return of(rango)
+      }
+      else{
+        throw Error("No se encontró el rango") 
+      }   
+    }
+
   
   }
