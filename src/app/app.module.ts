@@ -11,10 +11,10 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { CardPersonajeComponent } from './core/components/card-personaje/card-personaje.component';
 import { ContainerSaleroComponent } from './core/components/container-salero/container-salero.component';
 import { SponsorListadoComponent } from './core/components/sponsor-listado/sponsor-listado.component';
-import { EstadisticasJugadorComponent } from './core/components/estadisticas-jugador/estadisticas-jugador.component';
 import { LastGameComponent } from './core/components/last-game/last-game.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { AgenteService } from './core/services/agente.service';
+import { LastGameJugadorComponent } from './core/components/last-game-jugador/last-game-jugador.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +23,9 @@ import { AgenteService } from './core/services/agente.service';
     CardPersonajeComponent,
     ContainerSaleroComponent,
     SponsorListadoComponent,
-    EstadisticasJugadorComponent,
     LastGameComponent,
-    HomeComponent
+    HomeComponent,
+    LastGameJugadorComponent
   ],
   imports: [
     BrowserModule,

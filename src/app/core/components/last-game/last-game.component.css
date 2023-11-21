@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    justify-content: center;
+    background:none;
+    backdrop-filter: none;
+}
+
+div.card-last-game{
+    margin: 0.5rem;
+    width: 65%;
+    height: 5.5rem;
+    border-radius: 0.45rem;
+    border-radius: 0.8rem;
+    border: 1px solid #7BFF88;
+    background: rgba(32, 31, 31, 0.45);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+div.card-last-game:hover{
+    transition: all 0.5s ease-out;
+    background: rgba(1, 1, 1, 0.543);
+}
+
+div.icono{
+    width:4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0.5rem; 
+    background: rgba(16, 16, 16, 0.45);
+}
+img.icono-jugador{
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 50%;
+}

@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
+
 <body>
     <div class="contenedor-background">
         <div class="circle" #circle></div>
@@ -12,12 +9,12 @@
                         <img class="agente" #agenteImg (mouseover)="scaleCircle()"  src="/assets/VIPER.png" alt="">
                     </div>
                     <div class="contenedor-jugador--estadisticas">
+                        <h3 class="jugador">Mauro Sander</h3>
                         <app-last-game  *ngFor="let i of list"></app-last-game>
+                        <button class="btn-fav">Marcar como preferido</button>
                     </div>
-
                 </swiper-slide>
             </swiper-container>
         </div>
     </div>
 </body>
-</html>
