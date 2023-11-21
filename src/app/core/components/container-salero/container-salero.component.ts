@@ -15,24 +15,42 @@ register();
 export class ContainerSaleroComponent implements OnInit {
   //id!:number;
   jugadores!: Jugador[] 
+  inicial!: number;
+  mySwiper!: Swiper;
+
   
   
   constructor(private jugadorService: JugadorService) {
     //this.id = 1;
   }
   // Define una lista de IDs de jugador para el carrusel   
-  mySwiper!: Swiper;
+  
   ngOnInit() {
     this.jugadorService.obtenerJugadores().subscribe((response:any)=>{
-      this.jugadores = response as Jugador[]})
+      this.jugadores = response as Jugador[];
+      if (this.jugadores.length >= 2){
+        this.inicial = 1
+      }
+      else{
+        this.inicial = 0;
+      }
+    })
 
 
-    this.mySwiper = new Swiper('.swiper-container', {
-    spaceBetween: 10,
+    this.mySwiper = new Swiper('.swiper-container',
+     {
+     /*  spaceBetween: 1, */      
+      centeredSlides: true,
+      centeredSlidesBounds: true,      
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination', 
         clickable: true,
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
     });
   }
 

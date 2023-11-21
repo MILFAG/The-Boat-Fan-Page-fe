@@ -1,14 +1,32 @@
 section{
     background: transparent;
 }
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.5s ease-out;
-    padding: 0.5rem;
+
+.body{
+    width: 100vw;
+    height: 88vh; 
 }
+
+.container{
+    display: flex; 
+   justify-content: center;
+   align-content: center; 
+} 
+
+.swiper{  
+    display: flex;
+    max-width: 88vw;    
+   padding-left: 6vw;
+   padding-right: 6vw;
+
+ /*   justify-content: center;    
+    align-content: center;  
+    text-align: center;
+ */
+    
+   
+}
+
+
 
 

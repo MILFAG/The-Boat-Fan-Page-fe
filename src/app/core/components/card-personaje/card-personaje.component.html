@@ -1,9 +1,9 @@
 <body>    
-    <div class="contenedor">
 
+    <div class="contenedor" *ngIf="!cargando; else templateElse">
         <div [style]="estiloTrasero" class="card-Personaje back"> 
             <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>   
-             <img [style]="estiloRango"  *ngIf="rango" [src]="rango.iconoGrande" alt="Imagen de ejemplo" >
+             <img class="imagenRango"  *ngIf="rango" [src]="rango.iconoGrande" alt="Imagen de ejemplo" >
              <h1 class="estiloEpigrafe">{{rango.rango}}</h1>      
              <div class="contenedor-estadisticas">
                 <div style="text-align: left; margin-right: 5vw;" class="textoEstadisticas" >
@@ -21,12 +21,22 @@
                     <h1>{{estadisticas.deltaDanio}}</h1>
                 </div>
              </div>
-            <h1 class="footerCarta">Ultima partida: {{formatearFecha(estadisticas.ultimaPartida)}}</h1>  
+            <h1 class="footerCarta">Ultima partida: {{funcionesService.formatearFecha(estadisticas.ultimaPartida)}}</h1>  
         </div> 
         <div [style]="estiloFrontal" class="card-Personaje front">   
             <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>             
-             <img [style]="estiloAgente"  *ngIf="agente" [src]="agente.imagenCompleta" alt="Imagen de ejemplo" >
-        </div>          
-        
+             <img class="imagenAgente"  *ngIf="agente" [src]="agente.imagenCompleta" alt="Imagen de ejemplo" >
+        </div>   
     </div>
+    <ng-template #templateElse>
+        <div class="contenedor">
+            <h1 class="footerCargando">Cargando ...</h1>
+            <div class="contenedor cargando overlay-gradient" >                
+                <img style="opacity: 0.8; filter:drop-shadow()" src="/assets/cargando.gif">               
+            </div>
+        </div>
+    </ng-template>
+
+
+   
 </body>
