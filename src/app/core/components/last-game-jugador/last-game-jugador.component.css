@@ -9,14 +9,38 @@
     align-content: center;
     float: left;
     width: 50%;
-   
-  
 }
+
+.contenedor-jugador::before{
+    content: "";
+    background-color: #7bff8843;
+    position: absolute;
+}
+.contenedor-jugador::before{
+    border-radius: 50%;
+    width: 10%;
+    height: 75%;
+    top: 12%;
+    left: 18%;
+}
+
+.contenedor-jugador .box{
+    padding: 1rem;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(45px);
+    border-radius: .7rem;
+    transition: all ease-in-out .3s;
+}
+
 img.agente{
     width: 90%;
     height: auto;
-    transform: translateY(-6vh)
-  
+}
+
+.contenedor-jugador:hover::before{
+    transition: all ease-in-out .3s;
+    transform: scale(1.1);
+    background-color: #7bff8882;
 }
 
 .contenedor-jugador--estadisticas{
@@ -29,8 +53,9 @@ img.agente{
 
 h3.jugador{
     text-align: right;
+    font-weight: 400;
     margin-right: 9vw;
-    color: #D9D9D9;
+    margin-bottom: 1%;
 }
 
 button.btn-fav{
@@ -41,9 +66,9 @@ button.btn-fav{
     border: 1px solid #7BFF88;
     background: rgba(61, 59, 59, 0.45);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    align-self: center;
-    justify-self: end;
+    align-self: end;
     margin: 2%;
+    margin-right: 8vw;
 }
 
 button.btn-fav:hover{
