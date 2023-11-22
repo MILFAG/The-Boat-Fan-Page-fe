@@ -11,9 +11,12 @@ export class FuncionesService {
   }
  
   
-  formatearFecha(fecha:string):string{
+  formatearFecha(fecha:string, hora?:boolean):string{
     const fechaFormateada = new Date(fecha)
+    if(hora)
     return fechaFormateada.toLocaleDateString("es-AR",{hour: "numeric", minute: "numeric", second: "numeric"})
+    else
+    return fechaFormateada.toLocaleDateString("es-AR")
   }
     
   aclararColor(color:string, porcentaje:number):String{

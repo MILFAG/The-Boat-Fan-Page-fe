@@ -11,6 +11,8 @@ import { RangoService } from './core/services/rango.service';
 import { Rango } from './core/models/rango';
 import { EstadisticasService } from './core/services/estadisticas.service';
 import { Estadisticas } from './core/models/estadisticas';
+import { PartidaService } from './core/services/partida.service';
+import { Partida } from './core/models/partida';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +26,7 @@ export class AppComponent implements OnInit {
   /*public testResponse : ITestResponse  | null = null;
   public perfilUsuario: KeycloakProfile | null = null;*/
   public role = false;
-  constructor(/*private readonly keycloak: KeycloakService,private apiService: ApiService*/  private e: EstadisticasService ) {}
+  constructor(/*private readonly keycloak: KeycloakService,private apiService: ApiService*/  private e: PartidaService ) {}
 
   public async ngOnInit() {
    /* this.isLogueado = await this.keycloak.isLoggedIn();
@@ -42,8 +44,8 @@ export class AppComponent implements OnInit {
     }*/
 
    //let jugador;
-   this.e.obtenerEstadisticasJugador("bebotex","0000").subscribe((response:any)=>{
-    let jugador = response as Estadisticas;
+   this.e.obtenerUltimasPartidas("bebotex","0000",5).subscribe((response:any)=>{
+    let jugador = response as Partida[];
     console.log(jugador)  
     })
     

@@ -9,15 +9,6 @@ h1{
     
 }
 
-.contenedor-home{
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    padding-top: 6.5rem;
-    padding-left: 3rem;
-
-}
-
 .animacion{
     position: relative;
     margin-top: 1.53rem;

@@ -1,10 +1,13 @@
 <body>
+  <app-header></app-header>
   <div class="container">
-    <swiper-container loop="true" initial-slide="inicial" slides-per-view="2.9"  centered-slides="false"  class="swiper">
-      <swiper-slide *ngFor="let jugador of jugadores">      
+    <swiper-container loop="true"  slides-per-view="2.9"  centered-slides="false"  class="swiper">
+      <swiper-slide  *ngFor="let jugador of jugadores">      
         <app-card-personaje [jugador]="jugador"></app-card-personaje>        
-    </swiper-slide>    
-    </swiper-container>       
+    </swiper-slide>        
+    </swiper-container>  
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>    
   </div>
   
 </body>

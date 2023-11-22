@@ -1,20 +1,24 @@
 
-<body>
+<body>   
+    <app-header></app-header>
     <div class="contenedor-background">
         <div class="circle" #circle></div>
         <div class="estadisticas">
-            <swiper-container loop="true" centered-slides="true" zoom="true" >
-                <swiper-slide [id]="id" *ngFor="let id of jugadorIds">
+            <swiper-container loop="true" centered-slides="true" zoom="true"  allow-slide-next="true" *ngIf="jugadores">
+                <swiper-slide [id]="jugadores.indexOf(jugador)" *ngFor="let jugador of jugadores">
                     <div class="contenedor-jugador">
-                        <img class="agente" #agenteImg (mouseover)="scaleCircle()"  src="/assets/VIPER.png" alt="">
+                        <img class="agente" #agenteImg (mouseover)="scaleCircle()"  [src]="obtenerImagenAgente(jugador.nombreAgente)" alt="">
                     </div>
-                    <div class="contenedor-jugador--estadisticas">
-                        <h3 class="jugador">Mauro Sander</h3>
-                        <app-last-game  *ngFor="let i of list"></app-last-game>
+                    <div *ngIf="dataPartidas[jugador.usuario]" class="contenedor-jugador--estadisticas">
+                        <h3 class="jugador">{{jugador.nombre}} "{{jugador.usuario}}" {{jugador.apellido}} <br> 
+                                            Cumpleaños {{funcionesService.formatearFecha(jugador.fechaNacimiento)}}
+                        </h3>
+                        <h3 class="jugador">  </h3>
+                        <app-last-game [partida]="partida" *ngFor="let partida of dataPartidas[jugador.usuario]"></app-last-game>
                         <button class="btn-fav">Marcar como preferido</button>
                     </div>
-                </swiper-slide>
-            </swiper-container>
+                </swiper-slide>                
+            </swiper-container>        
         </div>
     </div>
 </body>

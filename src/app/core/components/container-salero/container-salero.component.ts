@@ -13,17 +13,15 @@ register();
   styleUrls: ['./container-salero.component.css']
 })
 export class ContainerSaleroComponent implements OnInit {
-  //id!:number;
   jugadores!: Jugador[] 
   inicial!: number;
-  mySwiper!: Swiper;
+  mySwiper!: Swiper; 
 
   
   
   constructor(private jugadorService: JugadorService) {
-    //this.id = 1;
   }
-  // Define una lista de IDs de jugador para el carrusel   
+  
   
   ngOnInit() {
     this.jugadorService.obtenerJugadores().subscribe((response:any)=>{
@@ -53,6 +51,5 @@ export class ContainerSaleroComponent implements OnInit {
       
     });
   }
-
 
 }

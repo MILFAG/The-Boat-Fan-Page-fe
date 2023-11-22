@@ -1,10 +1,43 @@
-<body>
-    <div class="card-last-game">
-        <div class="icono">
-            <img class="icono-jugador" src="assets/displayicon.png" alt="">
+
+    <div *ngIf="agente; else templateElse"  [style]="estilo" class="card-last-game">
+
+
+        <div class="contenedor-izquierdo">
+        <div class="icono">            
+            <img class="icono-jugador" [src]="agente.imagenCara" >   
         </div>
-          
+            <h1 class="nombre-agente"> {{agente.nombre.toUpperCase()}}</h1>          
+        </div>         
+        
+
+
+        <div class="contenedor-central"> 
+            <h1 >K / D / A</h1>           
+            <h1 >{{partida.stats.asesinatos}}/{{partida.stats.muertes}}/{{partida.stats.asistencias}}</h1>
+        </div>
+
+
+        <div class="contenedor-derecho">
+            <div class="contenedor-resultado">
+                <h1 class="rondas-propio">{{rondasPropio}}</h1>
+                <h1 class="dos-puntos">: </h1>
+                <h1 class="rondas-contrario">{{rondasContrario}}</h1>
+                
+            </div>   
+            <h1 class="mapa"> {{partida.metadata.mapa.nombre.toUpperCase()}}</h1>      
+        </div>
+
 
     </div>
-</body>
+
+
+
+    <ng-template #templateElse>
+        <div class="card-last-game">      
+            <h1>hola, soy un recordatorio de que falta buscar un gif de cargando para este componente</h1>     
+            <!-- <div class="contenedor cargando overlay-gradient" >                
+                <img style="opacity: 0.8; filter:drop-shadow()" src="/assets/cargando.gif">               
+            </div> -->
+        </div>
+    </ng-template>
 
