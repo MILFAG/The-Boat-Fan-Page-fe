@@ -34,14 +34,23 @@ export class LastGameComponent implements OnInit{
 obtenerData():void{  
   this.agenteService.obtenerAgentes().subscribe(
     (agentes:Agente[])=> {                
-      this.agente = agentes.find(agente => agente.nombre == this.partida.stats.agente.nombre)!     
-      this.generarEstilo()       
+      this.agente = agentes.find(agente => agente.nombre == this.partida.stats.agente.nombre)!   
       this.asignarRondas()    
+      this.generarEstilo()     
     })  
+    
 }
 
 generarEstilo():void{ 
-  this.estilo += 'border: 1px solid '+ this.funcionesService.oscurecerColor(this.agente.coloresGradiente[0],20) +';'
+  this.estilo += 'border: 0.5px solid darkgray;'  
+  switch (this.obtenerResultado()){
+    case "Victoria":  this.estilo += 'background:  linear-gradient(90deg, rgb(34, 160, 55),  rgba(32, 31, 31, 0.45),transparent);  border: 1px solid  rgb(34, 140, 55)'
+    break;
+    case "Derrota":  this.estilo += 'background:  linear-gradient(90deg, rgb(160, 34, 34),  rgba(32, 31, 31, 0.45),transparent); border: 1px solid  rgb(140, 34, 34)'
+    break
+    case "Empate":  this.estilo += 'background:  linear-gradient(90deg, #7F7F7F,  rgba(32, 31, 31, 0.45),transparent);  border: 1px solid  #7F7F7F'
+  }
+ 
 }
 
 obtenerResultado():string{
