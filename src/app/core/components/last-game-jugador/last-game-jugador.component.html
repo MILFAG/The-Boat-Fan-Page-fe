@@ -7,15 +7,18 @@
             <swiper-container loop="true" centered-slides="true" zoom="true"  allow-slide-next="true" *ngIf="jugadores">
                 <swiper-slide [id]="jugadores.indexOf(jugador)" *ngFor="let jugador of jugadores">
                     <div class="contenedor-jugador">
-                        <img class="agente" #agenteImg (mouseover)="scaleCircle()"  [src]="obtenerImagenAgente(jugador.nombreAgente)" alt="">
+                        <div class="box">
+                            <img class="agente" #agenteImg (mouseover)="scaleCircle()"  [src]="obtenerImagenAgente(jugador.nombreAgente)" alt="">
+                        </div>
                     </div>
                     <div *ngIf="dataPartidas[jugador.usuario]" class="contenedor-jugador--estadisticas">
-                        <h3 class="jugador">{{jugador.nombre}} "{{jugador.usuario}}" {{jugador.apellido}} <br> 
-                                            Cumpleaños {{funcionesService.formatearFecha(jugador.fechaNacimiento)}}
+                        <h3 class="jugador">{{jugador.nombre}} <strong>"{{jugador.usuario}}" </strong> {{jugador.apellido}} <br> 
+                            <i class="fa-solid fa-cake-candles" style="color: #fcfcfc;"></i>  {{funcionesService.formatearFecha(jugador.fechaNacimiento)}}
                         </h3>
                         <h3 class="jugador">  </h3>
                         <app-last-game [partida]="partida" *ngFor="let partida of dataPartidas[jugador.usuario]"></app-last-game>
                         <button class="btn-fav">Marcar como preferido</button>
+                        
                     </div>
                 </swiper-slide>                
             </swiper-container>        
