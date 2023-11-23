@@ -4,6 +4,7 @@
     height: 12vh;
     display: flex;
     justify-content: flex-end;
+    margin-right: 2rem;
 }
 
 .button {
@@ -15,14 +16,47 @@
     line-height: normal;
     border: none;
     border-radius: 0.25rem;
-    padding: 0.7rem;
-    margin: 1rem ;
+    margin: 0.7rem;
+    padding: 0.7rem;  
     cursor: pointer;
     transition: background-color 0.3s;
     background-color:unset;
+    justify-content: center;
+    align-content: center;
 }
 
-.button:last-child{
+
+
+.boton-submenu {
+    color: #D9D9D9;
+    font-family: Inter;
+    font-size: 18px;  
+    font-weight: 350;  
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    margin: 1rem ;    
+    cursor: pointer;
+    background-color:unset;
+} 
+
+.submenu {
+    padding: 0;
+    margin: 0;    
+    position: absolute;    
+	display: flex;
+    flex-direction: column;
+	padding: 1.3rem;
+	color: #fff;	
+    visibility: hidden;
+    background: rgba(1, 1, 1, 0.3) ;   
+    z-index: 1000;   
+}
+
+.adm{
     margin-right: 3rem;
 }
 
+.adm:hover .submenu{    
+	visibility: visible;
+}
