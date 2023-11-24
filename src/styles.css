@@ -18,9 +18,8 @@ body {
     height: 100vh;   
     
 }
-
-*{
-    color: #D9D9D9;
+/* NO PONER EL COLOR EN TODO PORQUE MOLESTA PARA ANGULAR MATERIAL   color: #D9D9D9; */
+*{  
     font-family: Inter;
     line-height: normal;
 }

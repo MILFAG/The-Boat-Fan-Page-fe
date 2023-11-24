@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core"
 import { Jugador } from "../models/jugador"
-import { Observable, map, throwError } from "rxjs"
-import { catchError } from 'rxjs/operators';
+import { Observable, map, of, throwError } from "rxjs"
+import { catchError, tap } from 'rxjs/operators';
 import { environment } from "src/environments/environment"
-import { HttpClient, HttpHeaders } from "@angular/common/http"
+import { HttpClient  } from "@angular/common/http"
 import Swal from 'sweetalert2';
 
 @Injectable({
@@ -26,7 +26,7 @@ import Swal from 'sweetalert2';
     eliminarJugador(id: string):Observable<any>{
       const url = this.url+'/'+id       
       console.log(url)
-      return this.http.delete(url).pipe(          
+      return this.http.delete<any>(url,{}).pipe(                  
         catchError(e => {          
           console.error(e.error.mensaje)
           Swal.fire(
@@ -34,8 +34,36 @@ import Swal from 'sweetalert2';
             e.error.mensaje,
             'error');
           return  throwError(e); 
-        })
-      ); 
+        }),        
+      )    
+    } 
+
+    actualizarJugador(jugador: Jugador):Observable<any>{
+      const url = this.url
+      return this.http.put<any>(url,jugador).pipe(                  
+        catchError(e => {          
+          console.error(e.error.mensaje)
+          Swal.fire(
+            this.cabeceraAlerta,
+            e.error.mensaje,
+            'error');
+          return  throwError(e); 
+        }),        
+      )    
+    }
+
+    agregarJugador(jugador: Jugador):Observable<any>{
+      const url = this.url
+      return this.http.post<any>(url,jugador).pipe(                  
+        catchError(e => {          
+          console.error(e.error.mensaje)
+          Swal.fire(
+            this.cabeceraAlerta,
+            e.error.mensaje,
+            'error');
+          return  throwError(e); 
+        }),        
+      )    
     }
 
  

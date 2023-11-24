@@ -24,6 +24,15 @@ import { AbmSponsorsComponent } from './core/components/abm-sponsors/abm-sponsor
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JugadorService } from './core/services/jugador.service';
 import { AbmJugadoresComponent } from './core/components/abm-jugadores/abm-jugadores.component';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatButtonModule} from '@angular/material/button';
+import { EditarJugadorComponent } from './core/components/abm-jugadores/editar-jugador/editar-jugador.component'; 
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select'; 
+import {MAT_DATE_LOCALE} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -38,6 +47,7 @@ import { AbmJugadoresComponent } from './core/components/abm-jugadores/abm-jugad
     AbmNoticiasComponent,
     AbmSponsorsComponent,
     AbmJugadoresComponent,
+    EditarJugadorComponent,
     
   ],
   imports: [
@@ -50,12 +60,20 @@ import { AbmJugadoresComponent } from './core/components/abm-jugadores/abm-jugad
     MatIconModule,
     MatTooltipModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatDialogModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatSelectModule
 
   ],
   providers: [
-    AgenteService,
-    JugadorService,
+   
+    {provide: MAT_DATE_LOCALE, useValue: 'es-ES' }  
    
   ],
  /* providers: [
