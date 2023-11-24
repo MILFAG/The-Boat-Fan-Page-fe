@@ -1,4 +1,14 @@
 
-<p>sponsor-listado works!</p>
+<div class="Contenedor-Logos-Superior">
+      <div *ngFor="let sponsor of data">
+        <img src="{{sponsor.logo}}"/>
+      </div>
+</div>
+<div class="Blur"></div>
+<div class="Contenedor-Logos-Inferior">
+    <div *ngFor="let sponsor of data">
+      <img class="inferior" src="{{sponsor.logo}}"/>
+    </div>
+</div>
 
 

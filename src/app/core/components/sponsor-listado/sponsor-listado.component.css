@@ -1,0 +1,49 @@
+.Contenedor-Logos-Superior, .Contenedor-Logos-Inferior {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 15%;
+  }
+  
+  .flex-item {
+    padding: 5px;
+    width: 200px; 
+    height: 200px; 
+    margin-top: 15%;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+
+  }
+  
+  img {
+    object-fit: cover; 
+    width: 100%; 
+    max-height: 200px; 
+  }
+  .Contenedor-Logos-Superior{
+    z-index: 100;
+  }
+  .inferior{
+    z-index: 85;
+    filter: blur(50px); 
+  }
+ /*  .Blur{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    z-index: 90;
+    backdrop-filter: blur(350px);
+    -webkit-backdrop-filter: blur(350px);
+  } */
+
+  .capsula{
+    position: absolute;
+    top:0%;
+    left: 0%;
+  }
