@@ -1,23 +1,22 @@
- <div class="contenedor-background">
-    <div class="circle" #circle></div>
-    <div class="estadisticas">
-        <swiper-container loop="true" centered-slides="true" zoom="true"  allow-slide-next="true" *ngIf="jugadores">
-            <swiper-slide [id]="jugadores.indexOf(jugador)" *ngFor="let jugador of jugadores">
-                <div class="contenedor-jugador">
-                    <div class="box">
-                        <img class="agente" #agenteImg (mouseover)="scaleCircle()"  [src]="obtenerImagenAgente(jugador.nombreAgente)" alt="">
-                    </div>
-                </div>
-                <div *ngIf="dataPartidas[jugador.usuario]" class="contenedor-jugador--estadisticas">
-                    <h3 class="jugador">{{jugador.nombre}} <strong>"{{jugador.usuario}}" </strong> {{jugador.apellido}} <br> 
-                        <i class="fa-solid fa-cake-candles" style="color: #fcfcfc;"></i>  {{funcionesService.formatearFecha(jugador.fechaNacimiento)}}
-                    </h3>
-                    <h3 class="jugador">  </h3>
-                    <app-last-game [partida]="partida" *ngFor="let partida of dataPartidas[jugador.usuario]"></app-last-game>
-                    <button class="btn-fav">Marcar como preferido</button>
-                    
-                </div>
-            </swiper-slide>                
-        </swiper-container>        
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+
+
+<div class="swiper">
+    <div class="swiper-wrapper" >    
+     <div *ngFor="let jugador of jugadores" class="swiper-slide">
+        <app-slide-last-game-jugador  [id]="jugadores.indexOf(jugador)" [jugador]="jugador" ></app-slide-last-game-jugador>   
+    </div>          
+
     </div>
-</div>
+  
+  
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>  
+
+  </div>
+
+  
+
+<div class="contenedor-background"></div>
+<div class="circulo"></div>

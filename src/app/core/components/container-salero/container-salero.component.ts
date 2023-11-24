@@ -15,7 +15,7 @@ register();
 export class ContainerSaleroComponent implements OnInit {
   jugadores!: Jugador[] 
   inicial!: number;
-  mySwiper!: Swiper; 
+  swiper!: Swiper; 
 
   
   
@@ -34,22 +34,41 @@ export class ContainerSaleroComponent implements OnInit {
       }
     })
 
-
-    this.mySwiper = new Swiper('.swiper-container',
-     {
-     /*  spaceBetween: 1, */      
-      centeredSlides: true,
-      centeredSlidesBounds: true,      
-      pagination: {
-        el: '.swiper-pagination', 
-        clickable: true,
-      },
+    this.swiper = new Swiper('.swiper', {
+      // Optional parameters
+     /*  slidesPerView:3, */
+      initialSlide:2,
+      direction: 'horizontal',
+      loop: false,    
+      // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },   
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
-      
-    });
+      keyboard: {
+        enabled: true,
+      },
+      //Configurar breakpoints mas adelante
+      breakpoints: {
+        640: {
+          slidesPerView: 1
+        },
+        780: {
+          slidesPerView: 2,   
+        },
+        1024: {
+          slidesPerView: 3
+        },
+      },    
+    });  
   }
+   
 
 }
+
+
+

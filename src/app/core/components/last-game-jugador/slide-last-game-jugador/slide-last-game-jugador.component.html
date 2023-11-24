@@ -1,0 +1,18 @@
+<div class="contenedor-general">
+<div class="contenedor-jugador">
+        <img class="agente" #agenteImg [src]="agente.imagenCompleta" alt="">
+</div>
+<div *ngIf="dataPartidas[jugador.usuario]" class="contenedor-jugador-estadisticas">
+    <div class="datos-jugador">
+        <h3 >{{jugador.nombre}} <strong>"{{jugador.usuario}}" </strong> {{jugador.apellido}} <br> 
+            <i class="fa-solid fa-cake-candles" style="color: #fcfcfc;"></i>  {{funcionesService.formatearFecha(jugador.fechaNacimiento)}}
+        </h3>
+    </div>
+    <app-last-game [partida]="partida" *ngFor="let partida of dataPartidas[jugador.usuario]"></app-last-game>
+    <button class="btn-fav">Marcar como preferido</button>    
+</div>
+</div>
+
+
+<div class="contenedor-background">
+</div>

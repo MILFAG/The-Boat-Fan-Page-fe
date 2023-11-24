@@ -32,6 +32,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select'; 
 import {MAT_DATE_LOCALE} from '@angular/material/core';
 import { EditarSponsorComponent } from './core/components/abm-sponsors/editar-sponsor/editar-sponsor.component';
+import { SlideLastGameJugadorComponent } from './core/components/last-game-jugador/slide-last-game-jugador/slide-last-game-jugador.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { EditarSponsorComponent } from './core/components/abm-sponsors/editar-sp
     AbmJugadoresComponent,
     EditarJugadorComponent,
     EditarSponsorComponent,
+    SlideLastGameJugadorComponent,
     
   ],
   imports: [
