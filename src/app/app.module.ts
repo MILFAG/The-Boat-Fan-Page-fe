@@ -15,14 +15,12 @@ import { ContainerSaleroComponent } from './core/components/container-salero/con
 import { SponsorListadoComponent } from './core/components/sponsor-listado/sponsor-listado.component';
 import { LastGameComponent } from './core/components/last-game/last-game.component';
 import { HomeComponent } from './core/components/home/home.component';
-import { AgenteService } from './core/services/agente.service';
 import { LastGameJugadorComponent } from './core/components/last-game-jugador/last-game-jugador.component';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatPaginatorModule} from '@angular/material/paginator'; 
 import { AbmNoticiasComponent } from './core/components/abm-noticias/abm-noticias.component';
 import { AbmSponsorsComponent } from './core/components/abm-sponsors/abm-sponsors.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { JugadorService } from './core/services/jugador.service';
 import { AbmJugadoresComponent } from './core/components/abm-jugadores/abm-jugadores.component';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatButtonModule} from '@angular/material/button';
@@ -33,6 +31,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select'; 
 import {MAT_DATE_LOCALE} from '@angular/material/core';
+import { EditarSponsorComponent } from './core/components/abm-sponsors/editar-sponsor/editar-sponsor.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +47,7 @@ import {MAT_DATE_LOCALE} from '@angular/material/core';
     AbmSponsorsComponent,
     AbmJugadoresComponent,
     EditarJugadorComponent,
+    EditarSponsorComponent,
     
   ],
   imports: [

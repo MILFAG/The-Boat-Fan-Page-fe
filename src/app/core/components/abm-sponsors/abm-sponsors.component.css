@@ -1,0 +1,127 @@
+
+*{
+    text-align: center;
+    color: black; 
+}
+
+ table{
+    background-color: black;       
+}
+
+
+.contenedor-tabla {
+    width: 40%;
+   display: flex;   
+   flex-direction: column;
+   position: absolute;
+   top: 25%;
+   right: 30%;
+
+}
+
+.celda-nombre, .celda-nivel {   
+    width: 20%;
+}
+
+.celda-id{
+    width: 10%;
+}
+
+.boton{
+    background: transparent;
+    width: 25%;
+    height: 100%;
+    border: none;
+}
+
+.celda-acciones{      
+    text-align: end;
+    align-content: end;
+}
+
+input{
+   padding: 1%;
+   margin: 3%;
+   border-radius: 8px;
+   color: black;     
+}
+
+.sin-sponsors{    
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: small;   
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }
+
+.contendor-general{
+    display:grid;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.celda-acciones{
+    width: 150px;
+    min-width: 150px;
+}
+
+.toolbar{
+    margin-top: 2%;
+    width: 60vw; 
+    border: 1px solid white;
+    padding: 1%;
+    border-radius: 8px;    
+    display: flex;    
+    align-items: center;    
+}
+
+::ng-deep .mat-mdc-paginator-outer-container, ::ng-deep .mat-mdc-paginator-container, ::ng-deep .mat-mdc-paginator {
+    color:black;
+    background-color:#D9D9D9 ;  
+     border-end-end-radius: 10px; 
+     border-end-start-radius: 10px;
+
+}
+
+::ng-deep .mat-mdc-paginator-range-actions{
+    color:#D9D9D9;
+    background-color:#E91E63;
+    border-radius: 30px;
+}
+
+::ng-deep .mdc-button {
+    color:#D9D9D9 !important;
+    background-color:#E91E63 !important;
+}
+
+.imagen-logo{
+    max-width: 150px;
+    max-height: 80px;
+    justify-self: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+
+.celda-logo{
+    text-align: center;
+    height: 80px; ;
+}
+
+
+.tabla{
+background-color:#D9D9D9 !important;  
+border-start-end-radius: 10px !important;
+border-start-start-radius: 10px !important;
+overflow:hidden !important;    
+}
+
+
+tr.mat-mdc-row:hover > *{
+    background-color: #E91E63;
+    color: #D9D9D9 !important;    
+}

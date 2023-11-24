@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>Datos del sponsor</h1>
+<div mat-dialog-content>
+  <p></p>
+ <form class="contenedor-contenido" [formGroup]="sponsorForm">
+  <mat-form-field>
+    <mat-label>Nombre del sponsor</mat-label>
+    <input matInput tabindex="1"  required [(ngModel)]="data.nombre"  formControlName="nombreControl">  
+   <mat-error *ngIf="nombreControl.hasError('required')">Ingrese el nombre del sponsor</mat-error>  
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nivel del sponsor</mat-label>
+    <input matInput tabindex="2"  required [(ngModel)]="data.nivel" formControlName="nivelControl">    
+     <mat-error *ngIf="nivelControl.hasError('required')">Ingrese el nivel del sponsor</mat-error> 
+  </mat-form-field>
+  <!--
+  
+<mat-form-field>
+  <mat-label>Agente favorito</mat-label>
+  <mat-select formControlName="agenteControl" required [(ngModel)]="data.nombreAgente">
+    <mat-option>--</mat-option>  
+      <mat-option *ngFor="let agente of agentes"[value]="agente" style="color: black;">{{agente}}</mat-option>    
+  </mat-select>
+     <mat-error *ngIf="agenteControl.hasError('required')">Seleccione un agente</mat-error> 
+</mat-form-field> -->
+ </form>
+
+ <form class="contenedor-logo" [formGroup]="sponsorForm">
+    <mat-form-field>
+        <mat-label>Logo del sponsor</mat-label>
+        <input matInput tabindex="3" required [(ngModel)]="data.logo" formControlName="logoControl">    
+       <mat-error *ngIf="logoControl.hasError('required')">Ingrese el logo del sponsor</mat-error>  
+      </mat-form-field>
+    
+ </form>
+
+<div mat-dialog-actions style="float: inline-end;">
+  <button mat-raised-button color="primary" [mat-dialog-close]="data" [disabled]="sponsorForm.invalid" tabindex="8">Guardar</button>
+  <button mat-raised-button color="basic" (click)="onNoClick()" tabindex="9">Cancelar</button>
+</div>

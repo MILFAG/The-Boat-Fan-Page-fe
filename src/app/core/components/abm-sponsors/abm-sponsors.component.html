@@ -1,1 +1,58 @@
-<p>abm-sponsors works!</p>
+<div *ngIf="sponsors" class="contendor-general">
+  
+
+
+    <div class="toolbar"> 
+      <span style="color:#D9D9D9">Sponsors</span>
+      <span class="spacer"></span>
+      <button mat-raised-button (click)="agregar()">Agregar Sponsor</button>
+    </div>
+  
+   <div *ngIf="sponsors.length > 0" class="contenedor-tabla"> 
+  
+  
+      <input matInput (keyup)="applyFilter($event)"  autocomplete="off" #input placeholder="Filtrar Jugadores"> 
+  
+  <table  mat-table [dataSource]="dataSource" class="tabla" >
+  
+      <ng-container matColumnDef="id" >
+        <th mat-header-cell *matHeaderCellDef class="celda-id"> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef class="celda-nombre"> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nivel">
+        <th mat-header-cell *matHeaderCellDef class="celda-nivel"> Nivel </th>
+        <td mat-cell *matCellDef="let element"> {{element.nivel}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="logo">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Logo </th>
+        <td mat-cell *matCellDef="let element" class="celda-logo">  <img class="imagen-logo" src="{{element.logo}}" alt="No hay url de logo válida"> </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef class="celda-acciones"> Acciones </th>
+        <td mat-cell *matCellDef="let sponsor" class="celda-acciones" > 
+             <button (click)="editar(sponsor)" class="boton"><mat-icon matTooltip="Editar un sponsor">edit-box</mat-icon ></button>
+             <button (click)="borrar(sponsor.id)" class="boton"><mat-icon matTooltip="Borrar un sponsor">delete</mat-icon></button>        
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      
+    </table>
+    <mat-paginator [pageSizeOptions]="[3, 5, 10]" showFirstLastButtons ></mat-paginator>  
+   </div> 
+    
+   <div *ngIf="sponsors.length == 0" class="sin-sponsors">
+    <h1 style=" color:#D9D9D9">No hay sponsors para mostrar</h1>
+  </div> 
+    
+  </div>

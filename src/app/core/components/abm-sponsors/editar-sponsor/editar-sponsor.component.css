@@ -1,0 +1,19 @@
+*{
+    color:black
+}
+
+.contenedor-contenido{
+    display: grid;       
+    grid-template-columns: 35%  35%;    
+    justify-content: center;
+}
+
+.contenedor-logo{
+    display: grid;  
+    grid-template-columns: 73%;
+    justify-content: center;
+}
+mat-form-field{
+    margin-left: 3%;
+    margin-right: 3%;
+}
