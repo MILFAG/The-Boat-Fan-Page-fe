@@ -11,22 +11,21 @@ register();
   templateUrl: './last-game-jugador.component.html',
   styleUrls: ['./last-game-jugador.component.css']
 })
-export class LastGameJugadorComponent implements OnInit {
 
+export class LastGameJugadorComponent implements OnInit {
   jugadores!: Jugador[]; 
   swiper!: Swiper;
-
-  @ViewChild('agenteImg') agenteImg!: ElementRef;
-  @ViewChild('circle') circle!: ElementRef;
+  colorFondo = "#ff0000";
 
   constructor(private jugadorService:JugadorService){
     
   }
 
   ngOnInit(): void {
-    this.obtenerData();     
-   //Inicializar swiper
-      
+    this.obtenerData();   
+    var miElemento = document.getElementsByClassName('circulo');
+   /* this.miElementoRef..classList.add.add()*/
+
  }
 
   obtenerData():void{
@@ -55,6 +54,8 @@ export class LastGameJugadorComponent implements OnInit {
       }
     )    
   }
+
+ 
  
  
 }

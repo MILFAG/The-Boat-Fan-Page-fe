@@ -2,19 +2,23 @@
     position: absolute;
     top: 0%;
     left: 0%;
-    width: 100vh;
+    width: 100vw;
     height: 100%;   
 }
 
 .contenedor-background{
-    z-index: 100;
-    background-color: #7bff8843;    
+    z-index: 10;
+    backdrop-filter: blur(350px);
+    -webkit-backdrop-filter: blur(350px);
 }
 
 .circulo{
-    background-color: #ffa57b43;
-    border-radius: 75%;
-    z-index: 101;
+    border-radius: 50%;
+    height: 55%;
+    width: 35%;
+    z-index: 9;
+    top: 25%;
+    left: 8%;
 }
 
 
@@ -25,7 +29,7 @@
 
 
 .contenedor-background:hover{
-    background-color: rgb(83, 22, 22);
+    background-color: rgba(83, 22, 22, 0);
 }
 
 .contenedor-background:hover::before{
@@ -33,6 +37,4 @@
     transform: scale(1.1);
     background-color: #7bff8882;
 }
-
-
 
