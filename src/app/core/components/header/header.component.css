@@ -23,6 +23,7 @@
     background-color:unset;
     justify-content: center;
     align-content: center;
+    z-index: 1000;
 }
 
 
