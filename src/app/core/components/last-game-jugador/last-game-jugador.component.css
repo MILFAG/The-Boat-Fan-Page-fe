@@ -7,7 +7,7 @@
 }
 
 .contenedor-background{
-    z-index: 10;
+    z-index: 2;
     backdrop-filter: blur(350px);
     -webkit-backdrop-filter: blur(350px);
 }
@@ -15,26 +15,19 @@
 .circulo{
     border-radius: 50%;
     height: 55%;
-    width: 35%;
-    z-index: 9;
-    top: 25%;
+    width: 30%;
+    z-index: 1;
+    top: 5%;
     left: 8%;
+    
 }
 
 
 .swiper{
-    z-index: 105;
+    z-index: 3;
     width: 100%;
 }
 
 
-.contenedor-background:hover{
-    background-color: rgba(83, 22, 22, 0);
-}
 
-.contenedor-background:hover::before{
-    transition: all ease-in-out .3s;
-    transform: scale(1.1);
-    background-color: #7bff8882;
-}
 

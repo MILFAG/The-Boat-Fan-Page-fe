@@ -27,7 +27,6 @@ constructor(private partidaService: PartidaService,  private agenteService: Agen
 }
   ngOnInit(): void {
    this.obtenerData()
-   console.log(this.id)
   }
 
 
