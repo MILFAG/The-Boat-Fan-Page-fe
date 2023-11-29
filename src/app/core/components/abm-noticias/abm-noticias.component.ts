@@ -19,7 +19,7 @@ export class AbmNoticiasComponent {
     const dialogRef = this.dialog.open(EditarNoticiaComponent,{
     disableClose: true,
     width: '50%',
-    data: new Noticia()
+    data: new Noticia(),
     })
     dialogRef.afterClosed().subscribe(noticia => {
       if (!(noticia == null)) {        
@@ -30,5 +30,7 @@ export class AbmNoticiasComponent {
         });
       }
     });
+    
   }
+  
 }

@@ -33,7 +33,6 @@ export class EditarNoticiaComponent implements OnInit{
    
    
    onNoClick(): void {
-     console.log('funciona btn')
      this.dialogRef.close();
    }
  
