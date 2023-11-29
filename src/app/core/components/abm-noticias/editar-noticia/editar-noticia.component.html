@@ -1,0 +1,45 @@
+<form class="contenedor-contenido" [formGroup]="noticiaForm">
+    <div class="form-group">
+      
+      <mat-form-field>
+        <mat-label>Tipo</mat-label>
+        <mat-select placeholder="Tipo" formControlName="tipoControl" required>
+          <mat-option *ngFor="let opcion of opciones" [value]="opcion">{{ opcion }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="tipoControl.hasError('required')">Ingrese el tipo de noticia</mat-error>
+      </mat-form-field>
+      
+
+      <mat-form-field>
+        <mat-label>Título</mat-label>
+        <input matInput tabindex="1"  [(ngModel)]="data.titulo" required formControlName="tituloControl">  
+        <mat-error *ngIf="tituloControl.hasError('required')">Ingrese el titulo de la noticia</mat-error> 
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Contenido</mat-label>
+        <textarea matInput [(ngModel)]="data.contenido" required formControlName="contenidoControl"></textarea> 
+        <mat-error *ngIf="contenidoControl.hasError('required')">Ingrese el contenido de la noticia</mat-error> 
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="fechaPicker" placeholder="Fecha de partida" formControlName="fechaPartidaControl">
+        <mat-datepicker-toggle matSuffix [for]="fechaPicker"></mat-datepicker-toggle>
+        <mat-datepicker #fechaPicker></mat-datepicker>
+        <mat-error *ngIf="fechaPartidaControl.hasError('required')">Ingrese la fecha de partida</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Rival</mat-label>
+        <input matInput tabindex="1"  [(ngModel)]="data.rival" required formControlName="rivalControl">  
+        <mat-error *ngIf="rivalControl.hasError('required')">Ingrese el rival de la partida</mat-error> 
+      </mat-form-field>
+
+    </div>
+
+</form>
+
+<div mat-dialog-actions style="float: inline-end;">
+  <button mat-raised-button color="primary" [mat-dialog-close]="data" [disabled]="noticiaForm.invalid" tabindex="8">Guardar</button>
+  <button mat-raised-button color="basic" (click)="onNoClick()" tabindex="9">Cancelar</button>
+</div>
