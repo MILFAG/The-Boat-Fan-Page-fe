@@ -8,6 +8,7 @@
 .contenedor{
   position:absolute;
   width:80%; 
+  max-width: 26%;
   height:90%; 
   align-content: center;
   justify-content: center;   

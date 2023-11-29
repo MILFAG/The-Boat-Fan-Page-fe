@@ -36,7 +36,7 @@ export class ContainerSaleroComponent implements OnInit {
 
     this.swiper = new Swiper('.swiper', {
       // Optional parameters
-      initialSlide:1,
+      initialSlide:0,
       direction: 'horizontal',
       loop: false,    
       // Navigation arrows
@@ -52,7 +52,7 @@ export class ContainerSaleroComponent implements OnInit {
         enabled: true,
       },
       //Configurar breakpoints mas adelante
-      breakpoints: {
+    /*  breakpoints: {
         640: {
           slidesPerView: 1
         },
@@ -62,7 +62,7 @@ export class ContainerSaleroComponent implements OnInit {
         1024: {
           slidesPerView: 3
         },
-      },    
+      },   */ 
     });  
   }
    
