@@ -3,31 +3,31 @@
     width: 100%;
     position: absolute;
     z-index: -1;
-    backdrop-filter: blur(1200px);
-   -webkit-backdrop-filter: blur(1200px); 
+     backdrop-filter: blur(180px); 
+     -webkit-backdrop-filter: blur(180px);  
 }
 
 .circulo-1, .circulo-2, .circulo-3{
-    width: 16%;
-    height: 30%;
-    background-color: white;
+    width: 32%;
+    height: 60%;
+    background-color: darkgray;
     z-index: -10;
     border-radius: 50%;
     position: absolute;
 }
 
 .circulo-1{
-    top: 10%;
+    top: -5%;
     left: -10%;
 }
 
 .circulo-2{
-    top: 50%;
-    left: 40%;
+    top: 40%;
+    left: 34%;
 }
 
 .circulo-3{
-    top:10%;
+    top:-5%;
     right:-10%;
 }
 
