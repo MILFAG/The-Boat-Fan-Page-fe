@@ -26,9 +26,8 @@
 }
 
 .datos-jugador{
-    text-align: center;
-    font-weight: 400;
-    margin-right: 9vw;
+    text-align: right;
+    margin-right: 17vw;
     margin-bottom: 1%;
 }
  
@@ -55,29 +54,7 @@
      height: 110%;
  }
  
- 
- 
-
- 
- button.btn-fav{
-/*         position: absolute;
-        top: 90%;
-        right: 5%; */
-    float: right;
-     color:white;
-     width: 25%;
-     height: 1.7rem;
-     border-radius: 0.8rem;
-     border: 1px solid #7BFF88;
-     background: rgba(61, 59, 59, 0.45);
-     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-     align-self: end;
-     margin: 2%;
-     margin-right: 8vw;
- }
- 
- button.btn-fav:hover{
-     background: rgba(30, 29, 29, 0.45);
-     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.377);
- }
+ h3{
+    font-weight: 400;
+}
 

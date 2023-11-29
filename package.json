@@ -27,7 +27,7 @@
     "keycloak-js": "^22.0.1",
     "ngx-sweetalert2": "^0.2.7",
     "rxjs": "~7.8.0",
-    "sweetalert2": "^11.10.1",
+    "sweetalert2": "^11.6.13",
     "swiper": "^10.3.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

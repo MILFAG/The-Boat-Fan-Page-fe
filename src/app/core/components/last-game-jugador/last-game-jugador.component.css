@@ -14,11 +14,11 @@
 
 .circulo{
     border-radius: 50%;
-    height: 55%;
-    width: 30%;
+    height: 75%;
+    width: 25%;
     z-index: 1;
-    top: 5%;
-    left: 8%;
+    top: 12%;
+    left: 12%;
     
 }
 
@@ -27,6 +27,7 @@
     z-index: 3;
     width: 100%;
 }
+
 
 
 

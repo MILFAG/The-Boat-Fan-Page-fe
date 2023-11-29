@@ -8,8 +8,7 @@
             <i class="fa-solid fa-cake-candles" style="color: #fcfcfc;"></i>  {{funcionesService.formatearFecha(jugador.fechaNacimiento)}}
         </h3>
     </div>
-    <app-last-game [partida]="partida" *ngFor="let partida of dataPartidas[jugador.usuario]"></app-last-game>
-    <button class="btn-fav">Marcar como preferido</button>    
+    <app-last-game [partida]="partida" *ngFor="let partida of dataPartidas[jugador.usuario]"></app-last-game>  
 </div>
 </div>
 
