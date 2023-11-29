@@ -36,8 +36,7 @@ export class ContainerSaleroComponent implements OnInit {
 
     this.swiper = new Swiper('.swiper', {
       // Optional parameters
-     /*  slidesPerView:3, */
-      initialSlide:2,
+      initialSlide:1,
       direction: 'horizontal',
       loop: false,    
       // Navigation arrows

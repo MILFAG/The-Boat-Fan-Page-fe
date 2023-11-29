@@ -1,6 +1,8 @@
-<body>    
+<div class="contenedor-general">
 
     <div class="contenedor" *ngIf="!cargando; else templateElse">
+
+
         <div [style]="estiloTrasero" class="card-Personaje back"> 
             <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>   
              <img class="imagenRango"  *ngIf="rango" [src]="rango.iconoGrande" alt="Imagen de ejemplo" >
@@ -23,11 +25,19 @@
              </div>
             <h1 class="footerCarta">Ultima partida: {{funcionesService.formatearFecha(estadisticas.ultimaPartida,true)}}</h1>  
         </div> 
+
+
+
+
         <div [style]="estiloFrontal" class="card-Personaje front">   
             <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>             
              <img class="imagenAgente"  *ngIf="agente" [src]="agente.imagenCompleta" alt="Imagen de ejemplo" >
         </div>   
     </div>
+
+
+
+    
     <ng-template #templateElse>
         <div class="contenedor">
             <h1 class="footerCargando">Cargando ...</h1>
@@ -38,5 +48,5 @@
     </ng-template>
 
 
-   
-</body>
+</div>   
+

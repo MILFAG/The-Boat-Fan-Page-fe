@@ -1,5 +1,5 @@
 <div class="contenedor-general">
-<div class="contenedor-jugador">
+<div class="contenedor-jugador" *ngIf="agente">
         <img class="agente" #agenteImg [src]="agente.imagenCompleta" alt="">
 </div>
 <div *ngIf="dataPartidas[jugador.usuario]" class="contenedor-jugador-estadisticas">

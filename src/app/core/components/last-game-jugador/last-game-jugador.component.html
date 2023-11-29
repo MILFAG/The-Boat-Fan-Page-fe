@@ -2,18 +2,14 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
 
 
-<div class="swiper">
+<div class="swiper" >
     <div class="swiper-wrapper" >    
-     <div *ngFor="let jugador of jugadores" class="swiper-slide">
+     <div *ngFor="let jugador of jugadores" class="swiper-slide"  >
         <app-slide-last-game-jugador  [id]="jugadores.indexOf(jugador)" [jugador]="jugador" ></app-slide-last-game-jugador>   
-    </div>          
-
+    </div>       
     </div>
-  
-  
     <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>  
-
+    <div class="swiper-button-next"></div> 
   </div>
 
   

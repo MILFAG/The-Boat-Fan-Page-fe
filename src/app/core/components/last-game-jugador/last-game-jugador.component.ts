@@ -39,7 +39,7 @@ export class LastGameJugadorComponent implements OnInit {
             (agente)=> {
               this.dataSlides[i] = agente!.coloresGradiente
               var miElemento = document.getElementById('circulo');
-              miElemento!.style.backgroundColor = <string>this.funcionesService.aclararColor((<string>this.dataSlides[0][1]),10)
+              miElemento!.style.backgroundColor = <string>this.funcionesService.aclararColor((<string>this.dataSlides[0][2]),10)
             }           
           )          
         }           
