@@ -8,11 +8,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
 body {
     margin: 0;
     padding: 0;
-    background: rgba(30, 30, 30, 0.75); 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;    
+    background: rgba(30, 30, 30, 0.75);     
     width: 100vw;
     height: 100vh;   
     
@@ -21,4 +17,9 @@ body {
 *{  
     font-family: Inter;
     line-height: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+    -webkit-user-drag: none;  
 }

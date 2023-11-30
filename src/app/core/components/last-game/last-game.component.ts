@@ -43,12 +43,13 @@ obtenerData():void{
 
 generarEstilo():void{ 
   this.estilo += 'border: 0.5px solid darkgray; background: rgba(32, 31, 31, 0.8)';  
- /*  switch (this.obtenerResultado()){
-    case "Victoria":  this.estilo += 'background:  linear-gradient(90deg, rgb(34, 160, 55),  rgba(32, 31, 31, 0.45),transparent);  border: 1px solid  rgb(34, 140, 55)'
+   switch (this.obtenerResultado()){
+    case "Victoria":  this.estilo += 'background:  linear-gradient(90deg, rgb(34, 160, 55),  rgba(32, 31, 31, 0.45),transparent)!important;'
     break;
-    case "Derrota":  this.estilo += 'background:  linear-gradient(90deg, rgb(160, 34, 34),  rgba(32, 31, 31, 0.45),transparent); border: 1px solid  rgb(140, 34, 34)'
+    case "Derrota":  this.estilo += 'background:  linear-gradient(90deg, rgb(160, 34, 34),  rgba(32, 31, 31, 0.45),transparent)!important;'
     break
-    case "Empate":  this.estilo += 'background:  linear-gradient(90deg, #7F7F7F,  rgba(32, 31, 31, 0.45),transparent);  border: 1px solid  #7F7F7F' */
+    case "Empate":  this.estilo += 'background:  linear-gradient(90deg, #7F7F7F,  rgba(32, 31, 31, 0.45),transparent) !important;' 
+   }
 }
 
 obtenerResultado():string{

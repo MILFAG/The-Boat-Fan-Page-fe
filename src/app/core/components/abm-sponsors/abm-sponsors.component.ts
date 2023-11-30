@@ -37,7 +37,6 @@ export class AbmSponsorsComponent {
     {this.sponsors = respuesta as Sponsor[]; 
      this.dataSource = new MatTableDataSource(this.sponsors);
      this.dataSource.paginator = this.paginator;
-     console.log(this.sponsors)
     })
   }
 

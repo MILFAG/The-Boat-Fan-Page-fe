@@ -27,7 +27,6 @@ export class LastGameJugadorComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerData();   
-    console.log(this.dataSlides)
  }
 
   obtenerData():void{

@@ -13,6 +13,7 @@ import { EstadisticasService } from './core/services/estadisticas.service';
 import { Estadisticas } from './core/models/estadisticas';
 import { PartidaService } from './core/services/partida.service';
 import { Partida } from './core/models/partida';
+import { UsuarioService } from './core/services/usuario.service';
 
 @Component({
   selector: 'app-root',
@@ -20,16 +21,16 @@ import { Partida } from './core/models/partida';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'dacs2023';
+  title = 'The Boat';
   public isLogueado = false;
   
   /*public testResponse : ITestResponse  | null = null;
-  public perfilUsuario: KeycloakProfile | null = null;*/
+ */
   public role = false;
-  constructor(/*private readonly keycloak: KeycloakService,private apiService: ApiService*/  private e: PartidaService ) {}
+  constructor(private readonly keycloak: KeycloakService,/*private apiService: ApiService*/ private usuarioService: UsuarioService ) {}
 
   public async ngOnInit() {
-   /* this.isLogueado = await this.keycloak.isLoggedIn();
+   /* 
     this.role=await this.keycloak.isUserInRole("ROLE-A");
     this.apiService.getTest().subscribe(resp => {this.testResponse= resp});
     console.log ("role=====>", this.role );
@@ -43,21 +44,24 @@ export class AppComponent implements OnInit {
       this.perfilUsuario = await this.keycloak.loadUserProfile();
     }*/
 
-   //let jugador;
-   this.e.obtenerUltimasPartidas("bebotex","0000",5).subscribe((response:any)=>{
-    let jugador = response as Partida[];
-    console.log(jugador)  
-    })
-    
+
+ /*    if (!await this.usuarioService.logueado()){
+      this.usuarioService.iniciarSesion()
+    }
+    else{
+      console.log('hola') 
+    } 
+    console.log(await this.usuarioService.logueado())
+   
+       */
+ 
+
+
+  
   }
 
-  /*public iniciarSesion() {
-    this.keycloak.login();
-  }
 
-  public cerrarSesion() {
-    this.keycloak.logout();
-  }*/
+
   
   
 

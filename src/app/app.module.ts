@@ -5,9 +5,6 @@ import {MatIconModule} from '@angular/material/icon'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatTooltipModule} from '@angular/material/tooltip'; 
-//import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
-//import { initializeKeycloak } from './core/init/keycloak-init.factory';
-//import { ApiService } from './core/services/apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/components/header/header.component';
 import { CardPersonajeComponent } from './core/components/card-personaje/card-personaje.component';
@@ -34,6 +31,8 @@ import {MAT_DATE_LOCALE} from '@angular/material/core';
 import { EditarSponsorComponent } from './core/components/abm-sponsors/editar-sponsor/editar-sponsor.component';
 import { SlideLastGameJugadorComponent } from './core/components/last-game-jugador/slide-last-game-jugador/slide-last-game-jugador.component';
 import { EditarNoticiaComponent } from './core/components/abm-noticias/editar-noticia/editar-noticia.component';
+import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { initializeKeycloak } from './core/init/keycloak-init.factory';
 
 @NgModule({
   declarations: [
@@ -56,7 +55,7 @@ import { EditarNoticiaComponent } from './core/components/abm-noticias/editar-no
   ],
   imports: [
     BrowserModule,
-    //KeycloakAngularModule,
+    KeycloakAngularModule,
     AppRoutingModule,
     HttpClientModule,    
     BrowserAnimationsModule,
@@ -76,20 +75,19 @@ import { EditarNoticiaComponent } from './core/components/abm-noticias/editar-no
 
   ],
   providers: [
-   
-    {provide: MAT_DATE_LOCALE, useValue: 'es-ES' }  
-   
-  ],
- /* providers: [
-    {
+
+    {provide: MAT_DATE_LOCALE, useValue: 'es-ES' },
+     {
       provide: APP_INITIALIZER,
-      //useFactory: initializeKeycloak,
+      useFactory: initializeKeycloak,
       multi: true,
       deps: [KeycloakService],
-    },
-    ApiService,
-  ],*/
+    },    
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+
+export class AppModule { 
+  
+}

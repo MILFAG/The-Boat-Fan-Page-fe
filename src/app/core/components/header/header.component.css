@@ -54,8 +54,8 @@
     z-index: 1000;   
 }
 
-.adm{
-    margin-right: 3rem;
+button:last-child{
+    margin-right: 2%;
 }
 
 .adm:hover .submenu{    

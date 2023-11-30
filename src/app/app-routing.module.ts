@@ -15,7 +15,7 @@ const routes: Routes = [
   //{ path: '/coso', component: AppComponent, canActivate: [AuthGuard]}
   { path: 'home', component: HomeComponent},
   { path: 'equipo', component: ContainerSaleroComponent},
-  { path: 'estadisticas', component: LastGameJugadorComponent},
+  { path: 'partidas', component: LastGameJugadorComponent},
   { path: 'sponsors', component: SponsorListadoComponent}, 
    { path: 'jugadorABM', component: AbmJugadoresComponent}, 
   { path: 'noticiaABM', component: AbmNoticiasComponent},
