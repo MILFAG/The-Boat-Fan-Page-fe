@@ -1,7 +1,7 @@
 export const environment = {
     production: true,
     keycloak: {
-        url:  'https://milfag-keycloak.up.railway.app/' ,
+        url:  'http://localhost:8080' ,
         realm: 'dacs',
         clientId: 'The Boat'
     },

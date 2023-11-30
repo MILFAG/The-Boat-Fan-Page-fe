@@ -16,7 +16,7 @@ export class ContainerSaleroComponent implements OnInit {
   jugadores!: Jugador[] 
   inicial!: number;
   swiper!: Swiper; 
-
+  centrar!:boolean;
   
   
   constructor(private jugadorService: JugadorService) {
@@ -27,43 +27,49 @@ export class ContainerSaleroComponent implements OnInit {
     this.jugadorService.obtenerJugadores().subscribe((response:any)=>{
       this.jugadores = response as Jugador[];
       if (this.jugadores.length >= 2){
-        this.inicial = 1
+        this.inicial = 1;
+        this.centrar=false;
       }
       else{
         this.inicial = 0;
+        this.centrar=true;
       }
+      this.swiper = new Swiper('.swiper', {
+        // Optional parameters
+        initialSlide:this.inicial,
+        centeredSlides:false,
+        direction: 'horizontal',
+        spaceBetween: 35,
+        loop: false,    
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },   
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        keyboard: {
+          enabled: true,
+        },
+  
+        //Configurar breakpoints mas adelante
+       breakpoints: {
+          640: {
+            slidesPerView: Math.min(1,this.jugadores.length),
+          },
+          780: {
+            slidesPerView: Math.min(2,this.jugadores.length),   
+          },
+          1024: {
+            slidesPerView: Math.min(3,this.jugadores.length)
+          },
+        },   
+      }); 
     })
 
-    this.swiper = new Swiper('.swiper', {
-      // Optional parameters
-      initialSlide:0,
-      direction: 'horizontal',
-      loop: false,    
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },   
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      keyboard: {
-        enabled: true,
-      },
-      //Configurar breakpoints mas adelante
-    /*  breakpoints: {
-        640: {
-          slidesPerView: 1
-        },
-        780: {
-          slidesPerView: 2,   
-        },
-        1024: {
-          slidesPerView: 3
-        },
-      },   */ 
-    });  
+     
   }
    
 

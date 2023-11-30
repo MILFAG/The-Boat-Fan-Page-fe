@@ -5,13 +5,14 @@
     max-width: 100%;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 1% ;
     background: transparent    !important;
 }
 
- /* .swiper, .swiper-wrapper, .swiper-slide{   
- background: transparent    !important;
+.swiper{   
+    padding-left: 5%;
    
 }
- */
+
 
 

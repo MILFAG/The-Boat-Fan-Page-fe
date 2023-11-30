@@ -1,26 +1,16 @@
-.contenedor-general{
-  background: transparent;
-  height: 88vh;
-  width: 100vw;
-  display: flex;
-}
-
 .contenedor{
-  position:absolute;
-  width:80%; 
-  max-width: 26%;
-  height:90%; 
-  align-content: center;
-  justify-content: center;   
+  width:24vw; 
+  height:79vh; 
+  margin: 0;
+
 }
 
  .card-Personaje {
   height: 100%;
   width: 100%;
+  max-width:83%;
   box-sizing: border-box;  
   border-radius: 0.8rem;
-  margin-right: 0.5rem;
-  margin:1rem;
   position: absolute;
   transform-style: preserve-3d; 
 } 
