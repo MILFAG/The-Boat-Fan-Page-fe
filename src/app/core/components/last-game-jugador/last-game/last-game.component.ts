@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Partida } from '../../models/partida';
-import { Agente } from '../../models/agente';
-import { AgenteService } from '../../services/agente.service';
-import { FuncionesService } from '../../services/funciones.service';
+import { Partida } from '../../../models/partida';
+import { Agente } from '../../../models/agente';
+import { AgenteService } from '../../../services/agente.service';
+import { FuncionesService } from '../../../services/funciones.service';
 
 @Component({
   selector: 'app-last-game',
