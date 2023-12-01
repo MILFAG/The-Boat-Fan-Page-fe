@@ -1,6 +1,5 @@
 
-    <div *ngIf="agente; else templateElse"  [style]="estilo" class="card-last-game">
-
+    <div *ngIf="agente"  [style]="estilo" class="card-last-game">
 
         <div class="contenedor-izquierdo">
         <div class="icono">            
@@ -33,12 +32,4 @@
 
 
 
-    <ng-template #templateElse>
-        <div class="card-last-game">      
-            <h1>hola, soy un recordatorio de que falta buscar un gif de cargando para este componente</h1>     
-            <!-- <div class="contenedor cargando overlay-gradient" >                
-                <img style="opacity: 0.8; filter:drop-shadow()" src="/assets/cargando.gif">               
-            </div> -->
-        </div>
-    </ng-template>
 

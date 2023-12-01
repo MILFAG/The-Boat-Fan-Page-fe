@@ -48,17 +48,5 @@ export class AgenteService {
     throw Error("No se encontró el agente") 
   }  
 }
- /* obtenerAgentes(): Observable<Agente[]>{
-    const url = environment.backendForFrontendUrl+"/agentes"
-    return this.http.get(url).pipe(
-      map((response:any)=> response as Agente[])
-    )
-  }
-
-  obtenerAgentePorNombre(nombre:string):Observable<Agente|undefined>{
-    return this.obtenerAgentes().pipe(
-      map((agentes: Agente[]) => agentes.find(agente => agente.nombre.toLowerCase().includes(nombre.toLowerCase())))
-    );
-  }*/
    
 }

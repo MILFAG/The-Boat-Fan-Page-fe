@@ -1,10 +1,47 @@
-<div class="contenedor-home">
-    <h1>THE <strong>BOAT</strong></h1>
-    <div class="animacion">
-        <img src="/assets/theboat.gif">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+ -->
+
+ <div  class="contenedor-principal">
+    <div class="contenedor-home">
+        <div class="contenedor-nombre">
+            <h1>THE <strong>BOAT</strong></h1>
+        </div>
+    </div>
+
+    <div class="contenedor-encuentros" >
+        <h1>PRÓXIMOS ENCUENTROS</h1>
+        <div class="swiper">
+            <div class="swiper-wrapper" >    
+                <div *ngFor="let encuentro of encuentros" class="swiper-slide">
+                    <app-encuentro [encuentro]="encuentro"></app-encuentro>  
+                </div>          
+            </div> 
+            <div class="swiper-pagination"></div> 
+        </div>  
+    </div> 
+
+</div> 
+
+
+
+    
+
+
+<!-- *ngFor="let encuentro of encuentros"  -->
+
+
+<!-- 
+<div class="swiper">
+    <div class="swiper-wrapper" >    
+
+        <div *ngFor="let encuentro of encuentros" class="swiper-slide" > 
+            <app-encuentro [encuentro]="encuentro"></app-encuentro>  
+        </div>       
+     
     </div>
 
 
+    <div class="swiper-pagination"></div>
 </div>
-
-
+</div>  -->

@@ -5,7 +5,6 @@ import { register } from 'swiper/element/bundle';
 import { JugadorService } from '../../services/jugador.service';
 import { Jugador } from '../../models/jugador';
 import { AgenteService } from '../../services/agente.service';
-import { Agente } from '../../models/agente';
 import { FuncionesService } from '../../services/funciones.service';
 // register Swiper custom elements
 register();
@@ -30,7 +29,6 @@ export class LastGameJugadorComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit(): void {
-   /*  this.swiper = new Swiper('.swiper') */
     this.obtenerData();   
  }
 
@@ -44,7 +42,7 @@ export class LastGameJugadorComponent implements OnInit, OnDestroy{
             (agente)=> {
               this.dataSlides[i] = agente!.coloresGradiente
               var miElemento = document.getElementById('circulo');
-              miElemento!.style.backgroundColor = <string>this.funcionesService.aclararColor((<string>this.dataSlides[0][2]),10)
+              miElemento!.style.backgroundColor = <string>this.funcionesService.aclararColor((<string>this.dataSlides[0][2]),20)
               this.swiper = new Swiper('.swiper', {      
                 direction: 'horizontal',
                 loop: false,        
@@ -58,7 +56,7 @@ export class LastGameJugadorComponent implements OnInit, OnDestroy{
               });    
               this.swiper.on('realIndexChange', () => {
                 var miElemento = document.getElementById('circulo');
-                miElemento!.style.backgroundColor = <string>this.funcionesService.aclararColor((<string>this.dataSlides[this.swiper.realIndex][2]),30)
+                miElemento!.style.backgroundColor = <string>this.funcionesService.aclararColor((<string>this.dataSlides[this.swiper.realIndex][2]),20)
               }); 
             }           
           )          

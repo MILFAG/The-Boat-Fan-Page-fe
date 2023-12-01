@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { KeycloakService } from 'keycloak-angular';
 import { KeycloakProfile } from 'keycloak-js';
-import { ApiService } from './core/services/apiservice.service';
 import { ITestResponse } from './core/models/response.interface';
 import { AgenteService } from './core/services/agente.service';
 import { Agente } from './core/models/agente';

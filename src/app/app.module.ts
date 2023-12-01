@@ -33,6 +33,7 @@ import { SlideLastGameJugadorComponent } from './core/components/last-game-jugad
 import { EditarNoticiaComponent } from './core/components/abm-noticias/editar-noticia/editar-noticia.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { initializeKeycloak } from './core/init/keycloak-init.factory';
+import { EncuentroComponent } from './core/components/home/encuentro/encuentro.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { initializeKeycloak } from './core/init/keycloak-init.factory';
     EditarSponsorComponent,
     SlideLastGameJugadorComponent,
     EditarNoticiaComponent,
+    EncuentroComponent,
     
   ],
   imports: [
