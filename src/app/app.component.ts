@@ -13,7 +13,7 @@ import { EstadisticasService } from './core/services/estadisticas.service';
 import { Estadisticas } from './core/models/estadisticas';
 import { PartidaService } from './core/services/partida.service';
 import { Partida } from './core/models/partida';
-import { UsuarioService } from './core/services/usuario.service';
+
 
 @Component({
   selector: 'app-root',
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   /*public testResponse : ITestResponse  | null = null;
  */
   public role = false;
-  constructor(private readonly keycloak: KeycloakService,/*private apiService: ApiService*/ private usuarioService: UsuarioService ) {}
+  constructor(private readonly keycloak: KeycloakService,/*private apiService: ApiService*/ /* private usuarioService: UsuarioService */ ) {}
 
   public async ngOnInit() {
    /* 
@@ -45,15 +45,15 @@ export class AppComponent implements OnInit {
     }*/
 
 
- /*    if (!await this.usuarioService.logueado()){
-      this.usuarioService.iniciarSesion()
+     if (!await this.keycloak.isLoggedIn()){
+      this.keycloak.login()
     }
     else{
-      console.log('hola') 
-    } 
-    console.log(await this.usuarioService.logueado())
-   
-       */
+      console.log(await this.keycloak.isUserInRole("admin")) 
+      console.log(await this.keycloak.getUserRoles())
+    }  
+ 
+       
  
 
 

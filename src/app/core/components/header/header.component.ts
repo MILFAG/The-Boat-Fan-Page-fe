@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../../services/usuario.service';
-import { KeycloakProfile } from 'keycloak-js';
+import { KeycloakService } from 'keycloak-angular';
 
 @Component({
   selector: 'app-header',
@@ -10,24 +9,26 @@ import { KeycloakProfile } from 'keycloak-js';
 export class HeaderComponent implements OnInit{
 
 logueado: boolean = false;
-perfil!: KeycloakProfile
+admin: boolean = false;
 
-constructor(private usuarioService: UsuarioService) {
+constructor(private keycloak: KeycloakService) {
   
 }
   async ngOnInit(): Promise<void> {
-    this.logueado = await this.usuarioService.logueado()
+    this.logueado = await this.keycloak.isLoggedIn()
     if (this.logueado){
-      this.perfil = await this.usuarioService.obtenerPerfil()
+      this.admin = this.keycloak.isUserInRole('admin')
     }
   }
 
   cerrarSesion():void{
-    this.usuarioService.cerrarSesion()
-  }
+    this.keycloak.logout()
+    this.logueado = false
+    this.admin = false
+   }
 
   iniciarSesion():void{
-    this.usuarioService.iniciarSesion()
+    this.keycloak.login()  
   }
 
 }
