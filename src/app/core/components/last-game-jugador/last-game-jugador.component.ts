@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
 import {Swiper} from 'swiper';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
@@ -15,7 +15,7 @@ register();
   styleUrls: ['./last-game-jugador.component.css']
 })
 
-export class LastGameJugadorComponent implements OnInit {
+export class LastGameJugadorComponent implements OnInit, OnDestroy{
   jugadores!: Jugador[]; 
   swiper!: Swiper;
   colorFondo = "#ff0000";
@@ -25,8 +25,12 @@ export class LastGameJugadorComponent implements OnInit {
     
   }
 
+  ngOnDestroy(): void {
+    this.swiper.destroy();
+  }
+
   ngOnInit(): void {
-    this.swiper = new Swiper('.swiper')
+   /*  this.swiper = new Swiper('.swiper') */
     this.obtenerData();   
  }
 

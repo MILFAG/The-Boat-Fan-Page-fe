@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
+import { Component } from '@angular/core';
 import { Noticia } from '../../models/noticia';
 import Swal from 'sweetalert2';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,7 +10,7 @@ import { EditarNoticiaComponent } from './editar-noticia/editar-noticia.componen
 })
 export class AbmNoticiasComponent {
   noticias:Noticia[] = [];
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
   constructor(private dialog: MatDialog) {}
 
   agregar():void{
@@ -26,7 +24,7 @@ export class AbmNoticiasComponent {
         this.noticias.push(noticia);
         Swal.fire({
           icon: 'success',
-          title: 'Jugador agregado con éxito',
+          title: 'Noticia agregada con éxito',
         });
       }
     });

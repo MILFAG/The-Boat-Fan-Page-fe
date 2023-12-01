@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import Swiper from 'swiper';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
@@ -12,7 +12,7 @@ register();
   templateUrl: './container-salero.component.html',
   styleUrls: ['./container-salero.component.css']
 })
-export class ContainerSaleroComponent implements OnInit {
+export class ContainerSaleroComponent implements OnInit, OnDestroy {
   jugadores!: Jugador[] 
   inicial!: number;
   swiper!: Swiper; 
@@ -20,6 +20,9 @@ export class ContainerSaleroComponent implements OnInit {
   
   
   constructor(private jugadorService: JugadorService) {
+  }
+  ngOnDestroy(): void {
+    this.swiper.destroy()
   }
   
   
