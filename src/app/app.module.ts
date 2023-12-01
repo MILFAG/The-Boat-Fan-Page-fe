@@ -34,6 +34,7 @@ import { EditarNoticiaComponent } from './core/components/abm-noticias/editar-no
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { initializeKeycloak } from './core/init/keycloak-init.factory';
 import { EncuentroComponent } from './core/components/home/encuentro/encuentro.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { EncuentroComponent } from './core/components/home/encuentro/encuentro.c
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatGridListModule
 
   ],
   providers: [

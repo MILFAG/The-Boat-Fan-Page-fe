@@ -2,12 +2,13 @@
     <button routerLink="/home" routerLinkActive="active" class="button">INICIO</button>
     <button routerLink="/equipo" routerLinkActive="active" class="button">EQUIPO</button>
     <button routerLink="/partidas" routerLinkActive="active" class="button">PARTIDAS</button>
-    <button routerLink="/sponsors" routerLinkActive="active" class="button">SPONSOR</button>
+    <button routerLink="/sponsors" routerLinkActive="active" class="button">SPONSORS</button>
     <button class="button adm" *ngIf="admin">ADMINISTRACIÓN 
         <div class="submenu">
             <button routerLink="/sponsorABM" routerLinkActive="active" class="boton-submenu">SPONSORS</button>
             <button routerLink="/noticiaABM" routerLinkActive="active" class="boton-submenu">NOTICIAS</button>
             <button routerLink="/jugadorABM" routerLinkActive="active" class="boton-submenu">JUGADORES</button>
+            <button routerLink="/encuentroABM" routerLinkActive="active" class="boton-submenu">ENCUENTROS</button>
         </div>           
     </button>  
     <button class="button" *ngIf="logueado" (click)="cerrarSesion()">CERRAR SESIÓN</button>

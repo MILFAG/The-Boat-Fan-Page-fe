@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Encuentro } from 'src/app/core/models/encuentro';
+import { FuncionesService } from 'src/app/core/services/funciones.service';
 
 @Component({
   selector: 'app-encuentro',
@@ -10,7 +11,7 @@ export class EncuentroComponent  {
 
 @Input() encuentro!: Encuentro;
 
-constructor() { }
+constructor(protected funcionesService: FuncionesService) { }
 
 
 }

@@ -39,7 +39,7 @@ obtenerData():void{
     this.encuentros = respuesta as Encuentro[];     
     this.swiper = new Swiper('.swiper', {      
       direction: 'vertical',
-      loop: true ,     
+      loop: false ,     
       spaceBetween: 0,      
       autoplay: {
         delay: 2000,
