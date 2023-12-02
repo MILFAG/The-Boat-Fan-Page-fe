@@ -1,26 +1,26 @@
 <div *ngIf="encuentro" class="card-encuentro">
-<h4 class="texto fecha">{{funcionesService.formatearFecha(encuentro.fecha,true)}}</h4> 
-
-<div class="contenedor-vs">
-  
-   
-    <div class="contenedor-izquierdo">
-        <h1 class="nombre-agente">THE BOAT</h1>       
-        <img src=".\assets\bote.webp" alt="asinoera">   
-    </div>         
-        
-
-
-    <div class="contenedor-central"> 
-        <h1>VS</h1>     
+    
+    <div class="contenedor-fechas">
+        <h4 class="texto fecha">{{funcionesService.formatearFecha(encuentro.fecha,true)}}
+        </h4> 
     </div>
 
+    <div class="contenedor-vs">
+        <div class="contenedor-izquierdo">
+            <h1 class="nombre-agente">THE BOAT</h1>       
+            <img src=".\assets\bote.webp" alt="asinoera">   
+        </div>         
 
-    <div class="contenedor-derecho">
-        <h1>{{encuentro.rival.toUpperCase()}}</h1> 
-        <img class="otro-equipo" [src]="encuentro.imagenRival" alt="asinoera"> 
+        <div class="contenedor-central"> 
+            <h1>VS</h1>     
+        </div>
+
+
+        <div class="contenedor-derecho">
+            <h1>{{encuentro.rival.toUpperCase()}}</h1> 
+            <img class="otro-equipo" [src]="encuentro.imagenRival" alt="asinoera"> 
+        </div>
+    
     </div>
- 
-</div>
 
 </div>

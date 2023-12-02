@@ -11,7 +11,7 @@
 
 .contenedor-home{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto   auto;
     width: 60vw;
      
@@ -48,17 +48,19 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal; 
+
 }
 
 .contenedor-encuentros{  
-    margin-left: 5%;
     height: 220px;
     width: 35vw;
     display: flex;
     flex-direction: column;
-    align-self: right;
+    align-self: flex-end;
+    align-items: flex-end;
+    margin-right: 1%;
+    margin-bottom: 2%;
 }
-
 
 .contenedor-encuentros h1{
     margin-bottom: 3%;
