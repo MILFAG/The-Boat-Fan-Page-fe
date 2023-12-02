@@ -6,15 +6,39 @@
 .contenedor-principal{
     width: 100vw;
     height: 80vh;
+    display: flex;
 }
 
 .contenedor-home{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto   auto;
+    width: 60vw;
      
 }
 
+.spacer {
+    flex: 1 1 auto;
+}
+.contenedor-nombre{
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo-p2{
+    padding-left: 3%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.titulo-p2 img{
+    display: block;
+    position: absolute;
+    top: 25%;
+    margin-top: 0;
+    width: 500px;
+}
 
 
 .contenedor-nombre h1{
@@ -32,6 +56,7 @@
     width: 35vw;
     display: flex;
     flex-direction: column;
+    align-self: right;
 }
 
 
