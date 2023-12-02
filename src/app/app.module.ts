@@ -35,6 +35,7 @@ import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { initializeKeycloak } from './core/init/keycloak-init.factory';
 import { EncuentroComponent } from './core/components/home/encuentro/encuentro.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     SlideLastGameJugadorComponent,
     EditarNoticiaComponent,
     EncuentroComponent,
+    FooterComponent,
     
   ],
   imports: [
