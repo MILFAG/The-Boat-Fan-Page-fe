@@ -44,14 +44,14 @@ export class AppComponent implements OnInit {
     }*/
 
 
-     if (!await this.keycloak.isLoggedIn()){
+/*      if (!await this.keycloak.isLoggedIn()){
       this.keycloak.login()
     }
     else{
       console.log(await this.keycloak.isUserInRole("admin")) 
       console.log(await this.keycloak.getUserRoles())
     }  
- 
+  */
        
  
 
