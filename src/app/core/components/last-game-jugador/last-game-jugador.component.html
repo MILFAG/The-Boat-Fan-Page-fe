@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
 
-
-<div class="swiper" >
+<div class="contenedor-principal">
+  <div class="swiper" >
     <div class="swiper-wrapper" >    
      <div *ngFor="let jugador of jugadores" class="swiper-slide"  >
         <app-slide-last-game-jugador  [id]="jugadores.indexOf(jugador)" [jugador]="jugador" ></app-slide-last-game-jugador>   
@@ -16,5 +16,7 @@
 
   <div class="contenedor-background"></div>
   <div id="circulo" class="circulo color"></div>
+</div>
+
 
 

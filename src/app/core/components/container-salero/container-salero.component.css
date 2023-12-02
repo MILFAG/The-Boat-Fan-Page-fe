@@ -1,18 +1,8 @@
-.contenedor-general{
-    display: flex; 
-    justify-content: center;
-    align-content: center; 
-    max-width: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 1% ;
-    background: transparent    !important;
-}
-
 .swiper{   
-    padding-left: 5%;
-   
+    padding-left: 5%;   
 }
 
-
+.swiper-pagination{
+    margin-bottom: 0.5%;
+}
 

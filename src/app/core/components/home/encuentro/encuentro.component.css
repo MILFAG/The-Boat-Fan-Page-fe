@@ -7,10 +7,12 @@
 .card-encuentro{
     display: grid;
     grid-template-rows: 25px 185px;
+    justify-items: end;
 }
 
 .contenedor-vs{
     display: grid; 
+    width: 100%;
     grid-template-columns: auto auto auto;
     align-items: center;   
     justify-items: center;

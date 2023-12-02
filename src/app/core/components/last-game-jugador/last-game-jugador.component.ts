@@ -54,7 +54,7 @@ export class LastGameJugadorComponent implements OnInit, OnDestroy{
                   enabled: true,
                 },                      
               });    
-              this.swiper.on('realIndexChange', () => {
+              this.swiper.on('activeIndexChange', () => {
                 var miElemento = document.getElementById('circulo');
                 miElemento!.style.backgroundColor = <string>this.funcionesService.aclararColor((<string>this.dataSlides[this.swiper.realIndex][2]),20)
               }); 

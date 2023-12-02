@@ -4,8 +4,6 @@
 }
 
 .contenedor-principal{
-    width: 100vw;
-    height: 80vh;
     display: flex;
 }
 
@@ -13,8 +11,7 @@
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto   auto;
-    width: 60vw;
-     
+    width: 60vw;     
 }
 
 .spacer {
@@ -35,7 +32,7 @@
 .titulo-p2 img{
     display: block;
     position: absolute;
-    top: 25%;
+    top: 210px;
     margin-top: 0;
     width: 500px;
 }
