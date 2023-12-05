@@ -15,7 +15,6 @@ import { HomeComponent } from './core/components/home/home.component';
 import { LastGameJugadorComponent } from './core/components/last-game-jugador/last-game-jugador.component';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatPaginatorModule} from '@angular/material/paginator'; 
-import { AbmNoticiasComponent } from './core/components/abm-noticias/abm-noticias.component';
 import { AbmSponsorsComponent } from './core/components/abm-sponsors/abm-sponsors.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbmJugadoresComponent } from './core/components/abm-jugadores/abm-jugadores.component';
@@ -30,12 +29,13 @@ import {MatSelectModule} from '@angular/material/select';
 import {MAT_DATE_LOCALE} from '@angular/material/core';
 import { EditarSponsorComponent } from './core/components/abm-sponsors/editar-sponsor/editar-sponsor.component';
 import { SlideLastGameJugadorComponent } from './core/components/last-game-jugador/slide-last-game-jugador/slide-last-game-jugador.component';
-import { EditarNoticiaComponent } from './core/components/abm-noticias/editar-noticia/editar-noticia.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { initializeKeycloak } from './core/init/keycloak-init.factory';
 import { EncuentroComponent } from './core/components/home/encuentro/encuentro.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { AbmEncuentrosComponent } from './core/components/abm-encuentros/abm-encuentros.component';
+import { EditarEncuentroComponent } from './core/components/abm-encuentros/editar-encuentro/editar-encuentro.component';
 
 @NgModule({
   declarations: [
@@ -47,15 +47,15 @@ import { FooterComponent } from './core/components/footer/footer.component';
     LastGameComponent,
     HomeComponent,
     LastGameJugadorComponent,
-    AbmNoticiasComponent,
     AbmSponsorsComponent,
     AbmJugadoresComponent,
     EditarJugadorComponent,
     EditarSponsorComponent,
     SlideLastGameJugadorComponent,
-    EditarNoticiaComponent,
     EncuentroComponent,
     FooterComponent,
+    AbmEncuentrosComponent,
+    EditarEncuentroComponent,
     
   ],
   imports: [

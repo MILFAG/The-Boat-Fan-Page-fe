@@ -6,9 +6,9 @@ import { ContainerSaleroComponent } from './core/components/container-salero/con
 import { SponsorListadoComponent } from './core/components/sponsor-listado/sponsor-listado.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { LastGameJugadorComponent } from './core/components/last-game-jugador/last-game-jugador.component';
-import { AbmNoticiasComponent } from './core/components/abm-noticias/abm-noticias.component';
 import { AbmSponsorsComponent } from './core/components/abm-sponsors/abm-sponsors.component';
 import { AbmJugadoresComponent } from './core/components/abm-jugadores/abm-jugadores.component';
+import { AbmEncuentrosComponent } from './core/components/abm-encuentros/abm-encuentros.component';
 
 const routes: Routes = [
   //{ path: '', canActivate: [AuthGuard]},
@@ -17,9 +17,10 @@ const routes: Routes = [
   { path: 'equipo', component: ContainerSaleroComponent},
   { path: 'partidas', component: LastGameJugadorComponent},
   { path: 'sponsors', component: SponsorListadoComponent}, 
-   { path: 'jugadorABM', component: AbmJugadoresComponent}, 
-  { path: 'noticiaABM', component: AbmNoticiasComponent},
+  { path: 'jugadorABM', component: AbmJugadoresComponent}, 
   { path: 'sponsorABM', component: AbmSponsorsComponent},
+  { path: 'encuentroABM', component: AbmEncuentrosComponent},
+
   { path: '**', redirectTo: 'home' }
 ];
 
