@@ -28,9 +28,8 @@
 
   <mat-form-field>
     <mat-label>Fecha de nacimiento</mat-label>
-    <input tabindex="5" matInput [matDatepicker]="picker" required [(ngModel)]="data.fechaNacimiento" formControlName="fechaControl">
+    <input tabindex="5" matInput [matDatepicker]="picker" [readonly]="true" required [(ngModel)]="data.fechaNacimiento" formControlName="fechaControl">
      <mat-error *ngIf="fechaControl.hasError('required')">Ingrese la fecha de nacimiento del jugador</mat-error> 
-    <mat-hint>DD/MM/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>

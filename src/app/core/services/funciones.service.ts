@@ -14,11 +14,20 @@ export class FuncionesService {
   formatearFecha(fecha:string, hora?:boolean):string{
     const fechaFormateada = new Date(fecha)
     if(hora)
-    return fechaFormateada.toLocaleDateString("es-AR",{hour: "numeric", minute: "numeric", second: "numeric"})
+    return fechaFormateada.toLocaleDateString("es-AR",{hour: "numeric", minute: "numeric"})
     else
     return fechaFormateada.toLocaleDateString("es-AR")
   }
     
+  obtenerHoras(fecha: Date){
+    if (!(fecha instanceof Date)){
+      fecha =  new Date(fecha);
+    }
+    const horas = fecha.getHours().toString().padStart(2, '0');
+    const minutos = fecha.getMinutes().toString().padStart(2, '0');
+    return `${horas}:${minutos}`;
+  }
+
   aclararColor(color:string, porcentaje:number):String{
     color = (color.indexOf("#")>=0) ? color.substring(1,color.length) : color;
     porcentaje = Math.floor((255*porcentaje)/100);

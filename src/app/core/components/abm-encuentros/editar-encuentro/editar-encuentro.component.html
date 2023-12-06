@@ -1,1 +1,43 @@
-<p>editar-encuentro works!</p>
+<h1 mat-dialog-title>Datos del encuentro</h1>
+<div mat-dialog-content>
+  <p></p>
+ <form class="contenedor-contenido" [formGroup]="encuentroForm">
+  <mat-form-field>
+    <mat-label>Equipo rival</mat-label>
+    <input matInput tabindex="1"  required [(ngModel)]="data.rival"  formControlName="nombreRival">  
+   <mat-error *ngIf="nombreRival.hasError('required')">Ingrese el nombre del rival</mat-error>  
+  </mat-form-field>
+
+  
+   <mat-form-field>
+    <mat-label>Fecha el encuentro</mat-label>
+    <input tabindex="5" matInput  [matDatepicker]="picker" [readonly]="true" required [(ngModel)]="data.fecha" formControlName="fechaControl">
+     <mat-error *ngIf="fechaControl.hasError('required')">Ingrese la fecha del encuentro</mat-error> 
+    <mat-hint>DD/MM/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field> 
+
+ 
+  <mat-form-field>
+      <mat-label>Hora</mat-label>
+      <input matInput type="time" formControlName="horaControl">
+       <ngx-material-timepicker #picker></ngx-material-timepicker>
+      <mat-error *ngIf="horaControl.hasError('required')">Ingrese la hora del encuentro</mat-error>   
+  </mat-form-field>    
+
+
+    <mat-form-field>
+        <mat-label>Logo del sponsor</mat-label>
+        <input matInput tabindex="3" required [(ngModel)]="data.imagenRival" formControlName="logoControl">    
+       <mat-error *ngIf="logoControl.hasError('required')">Ingrese el logo del sponsor</mat-error>  
+      </mat-form-field>    
+
+
+
+
+
+<div mat-dialog-actions style="float: inline-end;">
+  <button mat-raised-button (click)="onOkClick()" [mat-dialog-close]="data" [disabled]="encuentroForm.invalid" tabindex="8">Guardar</button>
+  <button mat-raised-button  (click)="onNoClick()" tabindex="9">Cancelar</button>
+</div>
