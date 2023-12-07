@@ -1,8 +1,6 @@
 
 
   <div class="contenedor" *ngIf="!cargando; else templateElse">
-
-
         <div [style]="estiloTrasero" class="card-Personaje back"> 
             <h1 class="headerCarta">{{jugador.usuario.toUpperCase()}} #{{jugador.tag.toUpperCase()}}</h1>   
              <img class="imagenRango"  *ngIf="rango" [src]="rango.iconoGrande" alt="Imagen de ejemplo" >
@@ -41,7 +39,7 @@
     <ng-template #templateElse>
     <div class="contenedor" style="pointer-events: none;">
         <div class="card-Personaje front"  >        
-            <img style="background: transparent; " src="/assets/cargando.gif">               
+            <img class="cargando" style="background: transparent; " src="/assets/cargando.gif">               
         </div>
     </div>
    </ng-template> 

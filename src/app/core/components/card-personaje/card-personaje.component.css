@@ -99,3 +99,8 @@
   height: 90%; 
   object-fit: cover;   
 }
+
+img.cargando  {
+  width: 80%;
+  height: auto;
+}

@@ -16,6 +16,7 @@
     align-items: center;
     justify-items: center;
     padding-right: 1%;
+    cursor: pointer;
 }
 
 .copyrights{
@@ -32,11 +33,3 @@ small, strong, i{
 
 
 
-button{
-    cursor: pointer;
-    transition: background-color 0.3s;
-    background-color:unset;
-    border-color: transparent;
-    color: #D9D9D9;
-    width: 6rem;
-}
