@@ -11,7 +11,7 @@
   
    <mat-form-field>
     <mat-label>Fecha el encuentro</mat-label>
-    <input tabindex="5" matInput  [matDatepicker]="picker" [readonly]="true" required [(ngModel)]="data.fecha" formControlName="fechaControl">
+    <input tabindex="2" matInput  [matDatepicker]="picker" [readonly]="true" required [(ngModel)]="data.fecha" formControlName="fechaControl">
      <mat-error *ngIf="fechaControl.hasError('required')">Ingrese la fecha del encuentro</mat-error> 
     <mat-hint>DD/MM/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -21,7 +21,7 @@
  
   <mat-form-field>
       <mat-label>Hora</mat-label>
-      <input matInput type="time" formControlName="horaControl">
+      <input tabindex="3" matInput type="time" formControlName="horaControl">
        <ngx-material-timepicker #picker></ngx-material-timepicker>
       <mat-error *ngIf="horaControl.hasError('required')">Ingrese la hora del encuentro</mat-error>   
   </mat-form-field>    
@@ -29,7 +29,7 @@
 
     <mat-form-field>
         <mat-label>Logo del sponsor</mat-label>
-        <input matInput tabindex="3" required [(ngModel)]="data.imagenRival" formControlName="logoControl">    
+        <input matInput tabindex="4" required [(ngModel)]="data.imagenRival" formControlName="logoControl">    
        <mat-error *ngIf="logoControl.hasError('required')">Ingrese el logo del sponsor</mat-error>  
       </mat-form-field>    
 
@@ -38,6 +38,6 @@
 
 
 <div mat-dialog-actions style="float: inline-end;">
-  <button mat-raised-button (click)="onOkClick()" [mat-dialog-close]="data" [disabled]="encuentroForm.invalid" tabindex="8">Guardar</button>
-  <button mat-raised-button  (click)="onNoClick()" tabindex="9">Cancelar</button>
+  <button mat-raised-button (click)="onOkClick()"  [mat-dialog-close]="data" [disabled]="encuentroForm.invalid" tabindex="5">Guardar</button>
+  <button mat-raised-button  (click)="onNoClick()" tabindex="6">Cancelar</button>
 </div>

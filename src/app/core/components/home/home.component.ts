@@ -35,7 +35,7 @@ export class HomeComponent  implements OnInit, OnDestroy, AfterViewInit{
   }
 
 obtenerData():void{
-  this.encuentrosService.obtenerEncuentros().subscribe((respuesta:any)=> {
+  this.encuentrosService.obtenerEncuentrosProximos().subscribe((respuesta:any)=> {
     this.encuentros = respuesta as Encuentro[];     
     this.swiper = new Swiper('.swiper', {      
       direction: 'vertical',

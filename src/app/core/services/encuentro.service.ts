@@ -23,6 +23,11 @@ export class EncuentroService {
     return  this.http.get(url).pipe(map((response:any)=> response as Encuentro[]))         
   }
 
+  obtenerEncuentrosProximos(): Observable<Encuentro[]>{
+    const url = this.url+'/proximos'
+    return  this.http.get(url).pipe(map((response:any)=> response as Encuentro[]))         
+  }
+
   eliminarEncuentro(id: string):Observable<any>{
     const url = this.url+'/'+id       
     console.log(url)
